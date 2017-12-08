@@ -1,0 +1,13 @@
+{
+    "name": "leo-galleguillos/string",
+    "license": "MIT",
+    "require": {
+        "zendframework/zend-test": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LeoGalleguillos\\String\\": "src/",
+            "LeoGalleguillos\\StringTest\\": "test/"
+        }
+    }
+}
