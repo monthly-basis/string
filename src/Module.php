@@ -1,6 +1,7 @@
 <?php
 namespace LeoGalleguillos\String;
 
+use LeoGalleguillos\String\View\Helper as StringHelper;
 use LeoGalleguillos\String\Model\Factory\View\Helper\Escape as EscapeHelperFactory;
 use LeoGalleguillos\String\Model\Service\UrlFriendly as UrlFriendlyService;
 
@@ -10,8 +11,13 @@ class Module
     {
         return [
             'view_helpers' => [
+                'aliases' => [
+                    'escape' => StringHelper\Escape::class,
+                ],
                 'factories' => [
-                    'escape' => EscapeHelperFactory::class,
+                    StringHelper\Escape::class => function ($serviceManager) {
+                        return new StringHelper\Escape();
+                    },
                 ],
             ],
         ];
