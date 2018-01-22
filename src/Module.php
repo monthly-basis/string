@@ -30,6 +30,11 @@ class Module
                 StringService\NGrams::class => function ($serviceManager) {
                     return new StringService\NGrams();
                 },
+                StringService\NGrams\SortedByCount::class => function ($serviceManager) {
+                    return new StringService\NGrams\SortedByCount(
+                        $serviceManager->get(StringService\NGrams::class)
+                    );
+                },
                 StringService\UrlFriendly::class => function ($serviceManager) {
                     return new StringService\UrlFriendly();
                 },
