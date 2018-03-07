@@ -28,5 +28,11 @@ class UrlFriendlyTest extends TestCase
             'surrounding-spaces-special-characters',
             $this->urlFriendlyService->getUrlFriendly($string)
         );
+
+        $string = '\'-!@$!@$';
+        $this->assertSame(
+            '-',
+            $this->urlFriendlyService->getUrlFriendly($string)
+        );
     }
 }

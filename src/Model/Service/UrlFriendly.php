@@ -17,6 +17,10 @@ class UrlFriendly
         // Trim hyphens from beginning and end of string.
         $string = trim($string, '-');
 
+        if (strlen($string) == 0) {
+            return '-';
+        }
+
         return $string;
     }
 }
