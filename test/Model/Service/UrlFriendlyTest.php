@@ -23,6 +23,16 @@ class UrlFriendlyTest extends TestCase
             $this->urlFriendlyService->getUrlFriendly('test')
         );
 
+        $this->assertSame(
+            'aint',
+            $this->urlFriendlyService->getUrlFriendly(' ain’t')
+        );
+
+        $this->assertSame(
+            'cant',
+            $this->urlFriendlyService->getUrlFriendly('can\'t ')
+        );
+
         $string = ' surrounding spaces & special characters! ';
         $this->assertSame(
             'surrounding-spaces-special-characters',
