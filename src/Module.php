@@ -27,6 +27,9 @@ class Module
     {
         return [
             'factories' => [
+                StringService\EndsWith::class => function ($serviceManager) {
+                    return new StringService\EndsWith();
+                },
                 StringService\NGrams::class => function ($serviceManager) {
                     return new StringService\NGrams();
                 },
@@ -34,6 +37,9 @@ class Module
                     return new StringService\NGrams\SortedByCount(
                         $serviceManager->get(StringService\NGrams::class)
                     );
+                },
+                StringService\StartsWith::class => function ($serviceManager) {
+                    return new StringService\StartsWith();
                 },
                 StringService\UrlFriendly::class => function ($serviceManager) {
                     return new StringService\UrlFriendly();
