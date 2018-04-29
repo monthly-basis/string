@@ -23,6 +23,11 @@ class Urls
         $urls  = [];
         $words = preg_split('/\s+/', $string);
 
+        foreach ($words as $word) {
+            if ($this->startsWithService->startsWith($word, 'http')) {
+                $urls[] = $word;
+            }
+        }
 
         return $urls;
     }
