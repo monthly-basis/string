@@ -44,6 +44,9 @@ class Module
                 StringService\UrlFriendly::class => function ($serviceManager) {
                     return new StringService\UrlFriendly();
                 },
+                StringService\Urls::class => function ($serviceManager) {
+                    return new StringService\Urls();
+                },
             ],
         ];
     }
