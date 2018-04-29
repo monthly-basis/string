@@ -45,7 +45,9 @@ class Module
                     return new StringService\UrlFriendly();
                 },
                 StringService\Urls::class => function ($serviceManager) {
-                    return new StringService\Urls();
+                    return new StringService\Urls(
+                        $serviceManager->get(StringService\StartsWith::class)
+                    );
                 },
             ],
         ];

@@ -1,8 +1,16 @@
 <?php
 namespace LeoGalleguillos\String\Model\Service;
 
+use LeoGalleguillos\String\Model\Service as StringService;
+
 class Urls
 {
+    public function __construct(
+        StringService\StartsWith $startsWithService
+    ) {
+        $this->startsWithService = $startsWithService;
+    }
+
     /**
      * Get URLs
      *

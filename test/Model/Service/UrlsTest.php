@@ -8,7 +8,10 @@ class UrlsTest extends TestCase
 {
     protected function setUp()
     {
-        $this->urlsService = new StringService\Urls();
+        $this->startsWithService = new StringService\StartsWith();
+        $this->urlsService = new StringService\Urls(
+            $this->startsWithService
+        );
     }
 
     public function testInitialize()
