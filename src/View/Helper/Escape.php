@@ -13,6 +13,9 @@ class Escape extends AbstractHelper
      */
     public function __invoke(string $string) : string
     {
-        return htmlspecialchars($string, ENT_SUBSTITUTE | ENT_DISALLOWED);
+        return htmlspecialchars(
+            $string,
+            ENT_QUOTES | ENT_SUBSTITUTE | ENT_DISALLOWED
+        );
     }
 }

@@ -28,5 +28,11 @@ class EscapeTest extends TestCase
             '&lt;html &amp;&gt;',
             $this->escapeHelper->__invoke($string)
         );
+
+        $string = '">attempt injection after attribute';
+        $this->assertSame(
+            '&quot;&gt;attempt injection after attribute',
+            $this->escapeHelper->__invoke($string)
+        );
     }
 }
