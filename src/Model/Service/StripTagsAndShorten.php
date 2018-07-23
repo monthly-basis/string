@@ -11,6 +11,9 @@ class StripTagsAndShorten
         $string = preg_replace('/\s+/s', ' ', $string);
         $string = trim($string);
 
-        return preg_replace('/^(.{$maxLength}[^\s]*).*/s', '$1', $string);
+        $string = wordwrap($string, $maxLength);
+        $string = explode("\n", $string);
+
+        return $string[0];
     }
 }
