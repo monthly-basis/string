@@ -41,6 +41,9 @@ class Module
                 StringService\StartsWith::class => function ($serviceManager) {
                     return new StringService\StartsWith();
                 },
+                StringService\StripTagsAndKeepFirstWords::class => function ($serviceManager) {
+                    return new StringService\StripTagsAndKeepFirstWords();
+                },
                 StringService\UrlFriendly::class => function ($serviceManager) {
                     return new StringService\UrlFriendly();
                 },
