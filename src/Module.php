@@ -12,11 +12,17 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
-                    'escape' => StringHelper\Escape::class,
+                    'escape'              => StringHelper\Escape::class,
+                    'stripTagsAndShorten' => StringHelper\StripTagsAndShorten::class,
                 ],
                 'factories' => [
                     StringHelper\Escape::class => function ($serviceManager) {
                         return new StringHelper\Escape();
+                    },
+                    StringHelper\StripTagsAndShorten::class => function ($serviceManager) {
+                        return new StringHelper\StripTagsAndShorten(
+                            $serviceManager->get(StringService\StripTagsAndShorten::class)
+                        );
                     },
                 ],
             ],
