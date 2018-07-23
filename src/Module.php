@@ -44,6 +44,9 @@ class Module
                 StringService\StripTagsAndKeepFirstWords::class => function ($serviceManager) {
                     return new StringService\StripTagsAndKeepFirstWords();
                 },
+                StringService\StripTagsAndShorten::class => function ($serviceManager) {
+                    return new StringService\StripTagsAndShorten();
+                },
                 StringService\UrlFriendly::class => function ($serviceManager) {
                     return new StringService\UrlFriendly();
                 },
