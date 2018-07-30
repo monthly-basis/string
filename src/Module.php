@@ -50,6 +50,9 @@ class Module
                         $serviceManager->get(StringService\NGrams::class)
                     );
                 },
+                StringService\Shorten::class => function ($serviceManager) {
+                    return new StringService\Shorten();
+                },
                 StringService\StartsWith::class => function ($serviceManager) {
                     return new StringService\StartsWith();
                 },
