@@ -46,7 +46,7 @@ class ShortenTest extends TestCase
             )
         );
         $this->assertSame(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'Lorem ipsum dolor sit amet,',
             $this->shortenService->shorten(
                 $string,
                 32

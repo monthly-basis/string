@@ -13,12 +13,18 @@ class Module
             'view_helpers' => [
                 'aliases' => [
                     'escape'              => StringHelper\Escape::class,
+                    'shorten' => StringHelper\Shorten::class,
                     'stripTagsAndKeepFirstWords' => StringHelper\StripTagsAndKeepFirstWords::class,
                     'stripTagsAndShorten' => StringHelper\StripTagsAndShorten::class,
                 ],
                 'factories' => [
                     StringHelper\Escape::class => function ($serviceManager) {
                         return new StringHelper\Escape();
+                    },
+                    StringHelper\Shorten::class => function ($serviceManager) {
+                        return new StringHelper\Shorten(
+                            $serviceManager->get(StringService\Shorten::class)
+                        );
                     },
                     StringHelper\StripTagsAndKeepFirstWords::class => function ($serviceManager) {
                         return new StringHelper\StripTagsAndKeepFirstWords(
