@@ -48,6 +48,9 @@ class Module
                 StringService\EndsWith::class => function ($serviceManager) {
                     return new StringService\EndsWith();
                 },
+                StringService\KeepFirstWords::class => function ($serviceManager) {
+                    return new StringService\KeepFirstWords();
+                },
                 StringService\NGrams::class => function ($serviceManager) {
                     return new StringService\NGrams();
                 },
