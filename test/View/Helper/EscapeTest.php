@@ -1,19 +1,26 @@
 <?php
 namespace LeoGalleguillos\StringTest\View\Helper;
 
-use LeoGalleguillos\String\View\Helper\Escape as EscapeHelper;
+use LeoGalleguillos\String\Model\Service as StringService;
+use LeoGalleguillos\String\View\Helper as StringHelper;
 use PHPUnit\Framework\TestCase;
 
 class EscapeTest extends TestCase
 {
     protected function setUp()
     {
-        $this->escapeHelper = new EscapeHelper();
+        $this->escapeService = new StringService\Escape();
+        $this->escapeHelper = new StringHelper\Escape(
+            $this->escapeService
+        );
     }
 
     public function testInitialize()
     {
-        $this->assertInstanceOf(EscapeHelper::class, $this->escapeHelper);
+        $this->assertInstanceOf(
+            StringHelper\Escape::class,
+            $this->escapeHelper
+        );
     }
 
     public function testInvoke()

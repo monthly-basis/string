@@ -19,7 +19,9 @@ class Module
                 ],
                 'factories' => [
                     StringHelper\Escape::class => function ($serviceManager) {
-                        return new StringHelper\Escape();
+                        return new StringHelper\Escape(
+                            $serviceManager->get(StringService\Escape::class)
+                        );
                     },
                     StringHelper\Shorten::class => function ($serviceManager) {
                         return new StringHelper\Shorten(

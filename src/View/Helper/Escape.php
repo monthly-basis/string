@@ -1,10 +1,17 @@
 <?php
 namespace LeoGalleguillos\String\View\Helper;
 
+use LeoGalleguillos\String\Model\Service as StringService;
 use Zend\View\Helper\AbstractHelper;
 
 class Escape extends AbstractHelper
 {
+    public function __construct(
+        StringService\Escape $escapeService
+    ) {
+        $this->escapeService = $escapeService;
+    }
+
     /**
      * Invoke.
      *
@@ -13,9 +20,6 @@ class Escape extends AbstractHelper
      */
     public function __invoke(string $string) : string
     {
-        return htmlspecialchars(
-            $string,
-            ENT_QUOTES | ENT_SUBSTITUTE | ENT_DISALLOWED
-        );
+        return $this->escapeService->escape($string);
     }
 }
