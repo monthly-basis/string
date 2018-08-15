@@ -47,6 +47,9 @@ class Module
     {
         return [
             'factories' => [
+                StringService\Contains\CaseInsensitive::class => function ($serviceManager) {
+                    return new StringService\Contains\CaseInsensitive();
+                },
                 StringService\EndsWith::class => function ($serviceManager) {
                     return new StringService\EndsWith();
                 },
