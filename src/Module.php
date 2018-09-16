@@ -79,6 +79,11 @@ class Module
                 StringService\StripTagsAndShorten::class => function ($serviceManager) {
                     return new StringService\StripTagsAndShorten();
                 },
+                StringService\ToHtml::class => function ($serviceManager) {
+                    return new StringService\ToHtml(
+                        $serviceManager->get(StringService\Escape::class)
+                    );
+                },
                 StringService\UrlFriendly::class => function ($serviceManager) {
                     return new StringService\UrlFriendly();
                 },
