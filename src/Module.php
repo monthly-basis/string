@@ -16,6 +16,7 @@ class Module
                     'shorten' => StringHelper\Shorten::class,
                     'stripTagsAndKeepFirstWords' => StringHelper\StripTagsAndKeepFirstWords::class,
                     'stripTagsAndShorten' => StringHelper\StripTagsAndShorten::class,
+                    'toHtml'              => StringHelper\ToHtml::class,
                 ],
                 'factories' => [
                     StringHelper\Escape::class => function ($serviceManager) {
@@ -36,6 +37,11 @@ class Module
                     StringHelper\StripTagsAndShorten::class => function ($serviceManager) {
                         return new StringHelper\StripTagsAndShorten(
                             $serviceManager->get(StringService\StripTagsAndShorten::class)
+                        );
+                    },
+                    StringHelper\ToHtml::class => function ($serviceManager) {
+                        return new StringHelper\ToHtml(
+                            $serviceManager->get(StringService\ToHtml::class)
                         );
                     },
                 ],
