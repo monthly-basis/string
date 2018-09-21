@@ -73,6 +73,10 @@ class Module
                         $serviceManager->get(StringService\NGrams::class)
                     );
                 },
+                StringService\ReplaceBadWords::class => function ($serviceManager) {
+                    return new StringService\ReplaceBadWords(
+                    );
+                },
                 StringService\Shorten::class => function ($serviceManager) {
                     return new StringService\Shorten();
                 },
