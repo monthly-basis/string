@@ -15,6 +15,12 @@ namespace LeoGalleguillos\String\Model\Service;
  */
 class ReplaceBadWords
 {
+    /**
+     * Replace bad words.
+     *
+     * @param string $string
+     * @return string
+     */
     public function replaceBadWords(
         string $string
     ): string {
@@ -44,7 +50,6 @@ class ReplaceBadWords
          * */
 
         $replacement = '!@#$%^&';
-        $string = preg_replace($patterns, $replacement, $string);
-        return $string;
+        return preg_replace($patterns, $replacement, $string);
     }
 }
