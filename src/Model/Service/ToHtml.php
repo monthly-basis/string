@@ -13,6 +13,7 @@ class ToHtml
 
     public function toHtml(string $message): string
     {
+        $messageEscaped = trim($message);
         $messageEscaped = $this->escapeService->escape($message);
 
         $pattern = '|(https?://(?!(www\.)?jiskha\.com)[^\s]+)|i';
