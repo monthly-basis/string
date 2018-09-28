@@ -48,8 +48,8 @@ class ReplaceBadWords
         ];
 
         /*
-         * ass, blow(\s)?job, dumb(\s)?ass, goddamn
-         * */
+         * \bass\b, blow(\s)?job, goddamn
+         **/
 
         $replacement = '!@#$%^&';
         return preg_replace($patterns, $replacement, $string);
