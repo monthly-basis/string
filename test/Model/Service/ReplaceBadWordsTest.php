@@ -62,5 +62,11 @@ class ReplaceBadWordsTest extends TestCase
             "foo !@#$%^& bar !@#$%^& baz\n\n",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+
+        $string = "ass bassoon sassy ASS\n\n";
+        $this->assertSame(
+            "!@#$%^& bassoon sassy !@#$%^&\n\n",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
     }
 }

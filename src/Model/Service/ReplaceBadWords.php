@@ -25,6 +25,7 @@ class ReplaceBadWords
         string $string
     ): string {
         $patterns = [
+            '/\bass\b/i',
             '/asshole/i',
             '/bastard/i',
             '/bitch/i',
