@@ -14,7 +14,7 @@ class ToHtml
     public function toHtml(string $message): string
     {
         $messageEscaped = trim($message);
-        $messageEscaped = $this->escapeService->escape($message);
+        $messageEscaped = $this->escapeService->escape($messageEscaped);
 
         $pattern = '|(https?://(?!(www\.)?jiskha\.com)[^\s]+)|i';
         $replacement = '<a href="$1" target="_blank" rel="external noopener">$1</a>';
