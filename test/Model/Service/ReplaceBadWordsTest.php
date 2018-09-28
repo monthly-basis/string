@@ -56,5 +56,11 @@ class ReplaceBadWordsTest extends TestCase
             'hello !@#$%^&er HOLY !@#$%^&',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+
+        $string = "foo faggot bar DumbASS baz\n\n";
+        $this->assertSame(
+            "foo !@#$%^& bar !@#$%^& baz\n\n",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
     }
 }

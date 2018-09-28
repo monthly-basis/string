@@ -32,6 +32,8 @@ class ReplaceBadWords
             '/cunt/i',
             '/dammit/i',
             '/damnit/i',
+            '/dumbass/i',
+            '/faggot/i',
             '/fuck/i',
             '/jackass/i',
             '/masturbat/i',
