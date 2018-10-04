@@ -28,12 +28,15 @@ class ReplaceBadWords
             '/\bass\b/i',
             '/asshole/i',
             '/bastard/i',
+            '/b1tch/i',
             '/bitch/i',
             '/cocksucker/i',
             '/cunt/i',
             '/dammit/i',
             '/damnit/i',
             '/dumbass/i',
+            '/\bfag\b/i',
+            '/\bfuk\b/i',
             '/faggot/i',
             '/fuck/i',
             '/jackass/i',
@@ -45,6 +48,7 @@ class ReplaceBadWords
             '/pussy/i',
             '/shit/i',
             '/vagina/i',
+            '/wh0re/i',
             '/whore/i',
         ];
 
