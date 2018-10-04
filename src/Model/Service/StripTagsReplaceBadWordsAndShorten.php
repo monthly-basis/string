@@ -11,7 +11,7 @@ class StripTagsReplaceBadWordsAndShorten
         $this->replaceBadWordsService = $replaceBadWordsService;
     }
 
-    public function stripTagsAndShorten(
+    public function stripTagsReplaceBadWordsAndShorten(
         string $string,
         int $maxLength
     ) : string {
