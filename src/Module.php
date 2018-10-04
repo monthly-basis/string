@@ -89,6 +89,11 @@ class Module
                 StringService\StripTagsAndShorten::class => function ($serviceManager) {
                     return new StringService\StripTagsAndShorten();
                 },
+                StringService\StripTagsReplaceBadWordsAndShorten::class => function ($serviceManager) {
+                    return new StringService\StripTagsReplaceBadWordsAndShorten(
+                        $serviceManager->get(StringService\ReplaceBadWords::class)
+                    );
+                },
                 StringService\ToHtml::class => function ($serviceManager) {
                     return new StringService\ToHtml(
                         $serviceManager->get(StringService\Escape::class)
