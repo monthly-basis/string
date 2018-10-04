@@ -6,15 +6,19 @@ use LeoGalleguillos\String\Model\Service as StringService;
 class ToHtml
 {
     public function __construct(
-        StringService\Escape $escapeService
+        StringService\Escape $escapeService,
+        StringService\ReplaceBadWords $replaceBadWordsService
     ) {
-        $this->escapeService = $escapeService;
+        $this->escapeService          = $escapeService;
+        $this->replaceBadWordsService = $replaceBadWordsService;
     }
 
     public function toHtml(string $message): string
     {
-        $messageEscaped = trim($message);
-        $messageEscaped = $this->escapeService->escape($messageEscaped);
+        $message = trim($message);
+        $message = $this->replaceBadWordsService->replaceBadWords($message);
+
+        $messageEscaped = $this->escapeService->escape($message);
 
         $pattern = '|(https?://(?!(www\.)?jiskha\.com)[^\s]+)|i';
         $replacement = '<a href="$1" target="_blank" rel="external noopener">$1</a>';

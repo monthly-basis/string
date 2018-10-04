@@ -102,7 +102,8 @@ class Module
                 },
                 StringService\ToHtml::class => function ($serviceManager) {
                     return new StringService\ToHtml(
-                        $serviceManager->get(StringService\Escape::class)
+                        $serviceManager->get(StringService\Escape::class),
+                        $serviceManager->get(StringService\ReplaceBadWords::class)
                     );
                 },
                 StringService\UrlFriendly::class => function ($serviceManager) {

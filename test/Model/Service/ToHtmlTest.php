@@ -9,7 +9,8 @@ class ToHtmlTest extends TestCase
     protected function setUp()
     {
         $this->toHtmlService = new StringService\ToHtml(
-            new StringService\Escape()
+            new StringService\Escape(),
+            new StringService\ReplaceBadWords()
         );
     }
 
