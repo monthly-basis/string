@@ -25,6 +25,12 @@ class Module
                             $serviceManager->get(StringService\Escape::class)
                         );
                     },
+                    StringHelper\EscapeAndReplaceBadWords::class => function ($serviceManager) {
+                        return new StringHelper\EscapeAndReplaceBadWords(
+                            $serviceManager->get(StringService\Escape::class),
+                            $serviceManager->get(StringService\ReplaceBadWords::class)
+                        );
+                    },
                     StringHelper\Shorten::class => function ($serviceManager) {
                         return new StringHelper\Shorten(
                             $serviceManager->get(StringService\Shorten::class)
