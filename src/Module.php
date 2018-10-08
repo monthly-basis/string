@@ -13,6 +13,7 @@ class Module
             'view_helpers' => [
                 'aliases' => [
                     'escape'              => StringHelper\Escape::class,
+                    'escapeAndReplaceBadWords' => StringHelper\EscapeAndReplaceBadWords::class,
                     'shorten' => StringHelper\Shorten::class,
                     'stripTagsAndKeepFirstWords' => StringHelper\StripTagsAndKeepFirstWords::class,
                     'stripTagsAndShorten' => StringHelper\StripTagsAndShorten::class,
