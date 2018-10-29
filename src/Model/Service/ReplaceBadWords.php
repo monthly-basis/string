@@ -37,7 +37,7 @@ class ReplaceBadWords
             '/dumbass/i',
             '/\bfag\b/i',
             '/\bfuk\b/i',
-            '/faggot/i',
+            '/fagg?ot/i',
             '/fuck/i',
             '/jackass/i',
             '/masturbat/i',
