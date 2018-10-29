@@ -42,6 +42,7 @@ class ReplaceBadWords
             '/jackass/i',
             '/masturbat/i',
             '/my dick/i',
+            '/n1gg/i',
             '/nigg/i',
             '/orgasm/i',
             '/penis/i',
