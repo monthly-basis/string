@@ -66,6 +66,10 @@ class Module
     {
         return [
             'factories' => [
+                StringService\ContainsBadWords::class => function ($serviceManager) {
+                    return new StringService\ContainsBadWords(
+                    );
+                },
                 StringService\Contains\CaseInsensitive::class => function ($serviceManager) {
                     return new StringService\Contains\CaseInsensitive();
                 },
