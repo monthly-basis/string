@@ -89,5 +89,11 @@ class ReplaceBadWordsTest extends TestCase
             '!@#$%^& dick tracy can suck !@#$%^&',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+
+        $string = 'cockadoodledoo cock sucker';
+        $this->assertSame(
+            'cockadoodledoo !@#$%^&er',
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
     }
 }

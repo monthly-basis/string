@@ -24,7 +24,7 @@ class RegularExpressionsOfBadWords
             '/b1tch/i',
             '/bitch/i',
             '/bullshit/i',
-            '/cocksucker/i',
+            '/cock\s*suck/i',
             '/cunt/i',
             '/dammit/i',
             '/damnit/i',
