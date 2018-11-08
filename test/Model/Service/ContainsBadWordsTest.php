@@ -33,8 +33,13 @@ class ContainsBadWordsTest extends TestCase
 
     public function testContainsBadWords()
     {
-        $string = 'bass fish are delicious';
+        $string = 'bass fish kushites are delicious';
         $this->assertFalse(
+            $this->containsBadWordsService->containsBadWords($string)
+        );
+
+        $string = 'shit';
+        $this->assertTrue(
             $this->containsBadWordsService->containsBadWords($string)
         );
 

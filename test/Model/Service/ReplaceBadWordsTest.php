@@ -33,9 +33,9 @@ class ReplaceBadWordsTest extends TestCase
 
     public function testReplaceBadWords()
     {
-        $string = 'hello world';
+        $string = 'hello world Kushite';
         $this->assertSame(
-            'hello world',
+            'hello world Kushite',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
@@ -51,9 +51,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'hello fucker HOLY SHIT';
+        $string = 'hello fucker HOLY SHIT shithead';
         $this->assertSame(
-            'hello !@#$%^&er HOLY !@#$%^&',
+            'hello !@#$%^&er HOLY !@#$%^& !@#$%^&head',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
