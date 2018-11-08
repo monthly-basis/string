@@ -30,6 +30,7 @@ class ReplaceBadWords
             '/bastard/i',
             '/b1tch/i',
             '/bitch/i',
+            '/bullshit/i',
             '/cocksucker/i',
             '/cunt/i',
             '/dammit/i',
