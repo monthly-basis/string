@@ -42,7 +42,7 @@ class ContainsBadWords
             '/orgasm/i',
             '/penis/i',
             '/phuck/i',
-            '/pussy/i',
+            '/p\s*u\s*s\s*s\s*y/i',
             '/\bshit/i',
             '/vagina/i',
             '/wh0re/i',

@@ -97,5 +97,10 @@ class ContainsBadWordsTest extends TestCase
         $this->assertTrue(
             $this->containsBadWordsService->containsBadWords($string)
         );
+
+        $string = '   P u s s       y';
+        $this->assertTrue(
+            $this->containsBadWordsService->containsBadWords($string)
+        );
     }
 }
