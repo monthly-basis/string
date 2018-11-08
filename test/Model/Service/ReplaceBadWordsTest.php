@@ -20,7 +20,10 @@ class ReplaceBadWordsTest extends TestCase
 {
     protected function setUp()
     {
-        $this->replaceBadWordsService = new StringService\ReplaceBadWords();
+        $this->regularExpressionsOfBadWordsService = new StringService\RegularExpressionsOfBadWords();
+        $this->replaceBadWordsService = new StringService\ReplaceBadWords(
+            $this->regularExpressionsOfBadWordsService
+        );
     }
 
     public function testInitialize()

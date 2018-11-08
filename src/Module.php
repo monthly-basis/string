@@ -66,8 +66,9 @@ class Module
     {
         return [
             'factories' => [
-                StringService\ContainsBadWords::class => function ($serviceManager) {
+                StringService\ContainsBadWords::class => function ($sm) {
                     return new StringService\ContainsBadWords(
+                        $sm->get(StringService\RegularExpressionsOfBadWords::class)
                     );
                 },
                 StringService\Contains\CaseInsensitive::class => function ($serviceManager) {
@@ -90,8 +91,13 @@ class Module
                         $serviceManager->get(StringService\NGrams::class)
                     );
                 },
-                StringService\ReplaceBadWords::class => function ($serviceManager) {
+                StringService\RegularExpressionsOfBadWords::class => function ($serviceManager) {
+                    return new StringService\RegularExpressionsOfBadWords(
+                    );
+                },
+                StringService\ReplaceBadWords::class => function ($sm) {
                     return new StringService\ReplaceBadWords(
+                        $sm->get(StringService\RegularExpressionsOfBadWords::class)
                     );
                 },
                 StringService\Shorten::class => function ($serviceManager) {

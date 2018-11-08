@@ -8,9 +8,13 @@ class ToHtmlTest extends TestCase
 {
     protected function setUp()
     {
+        $this->replaceBadWordsServiceMock = $this->createMock(
+            StringService\ReplaceBadwords::class
+        );
+
         $this->toHtmlService = new StringService\ToHtml(
             new StringService\Escape(),
-            new StringService\ReplaceBadWords()
+            $this->replaceBadWordsServiceMock
         );
     }
 
@@ -24,6 +28,9 @@ class ToHtmlTest extends TestCase
 
     public function testToHtml()
     {
+        $this->replaceBadWordsServiceMock
+             ->method('replaceBadWords')
+             ->willReturn('hello world');
         $string = 'hello world';
         $this->assertSame(
             'hello world',
