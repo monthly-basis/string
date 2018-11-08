@@ -39,9 +39,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'fuck you';
+        $string = 'fuck you F U C K';
         $this->assertSame(
-            '!@#$%^& you',
+            '!@#$%^& you !@#$%^&',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

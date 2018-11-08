@@ -39,7 +39,7 @@ class ReplaceBadWords
             '/\bfag\b/i',
             '/\bfuk\b/i',
             '/fagg?ot/i',
-            '/fuck/i',
+            '/f\s*u\s*c\s*k/i',
             '/jackass/i',
             '/masturbat/i',
             '/my dick/i',
