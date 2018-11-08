@@ -43,6 +43,7 @@ class RegularExpressionsOfBadWords
             '/phuck/i',
             '/p\s*u\s*s\s*s\s*y/i',
             '/\bshit/i',
+            '/slut/i',
             '/vagina/i',
             '/wh0re/i',
             '/whore/i',
