@@ -44,6 +44,7 @@ class RegularExpressionsOfBadWords
             '/orgasm/i',
             '/penis/i',
             '/phuck/i',
+            '/porn/i',
             '/p\s*u\s*s\s*s\s*y/i',
             '/\bshit/i',
             '/slut/i',
