@@ -84,9 +84,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'bullshit bullsht dick tracy can suck my dick gay';
+        $string = 'bullshit bullsht dick tracy can suck my dick';
         $this->assertSame(
-            '!@#$%^& !@#$%^& dick tracy can suck !@#$%^& !@#$%^&',
+            '!@#$%^& !@#$%^& dick tracy can suck !@#$%^&',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

@@ -36,7 +36,6 @@ class RegularExpressionsOfBadWords
             '/fagg?ot/i',
             '/fap/i',
             '/f\s*\.?u\s*c\s*k/i',
-            '/gay/i',
             '/jackass/i',
             '/masturbat/i',
             '/my dick/i',
