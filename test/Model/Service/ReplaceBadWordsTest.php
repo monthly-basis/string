@@ -42,9 +42,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'fuck you F U C K';
+        $string = 'fuck you F U C K f.uck f-u-c----k';
         $this->assertSame(
-            '!@#$%^& you !@#$%^&',
+            '!@#$%^& you !@#$%^& !@#$%^& !@#$%^&',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
