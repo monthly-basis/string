@@ -31,7 +31,7 @@ class RegularExpressionsOfBadWords
             '/dammit/i',
             '/damnit/i',
             '/dumbass/i',
-            '/\bfag\b/i',
+            '/\bf\W*a\W*g\b/i',
             '/\bfuk\b/i',
             '/fagg?ot/i',
             '/fap/i',

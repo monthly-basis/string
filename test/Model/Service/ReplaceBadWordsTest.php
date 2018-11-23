@@ -60,9 +60,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = "foo faggot fagot bar DumbASS baz\n\n";
+        $string = "F-A-G foo faggot fagot bar DumbASS baz\n\n";
         $this->assertSame(
-            "foo !@#$%^& !@#$%^& bar !@#$%^& baz\n\n",
+            "!@#$%^& foo !@#$%^& !@#$%^& bar !@#$%^& baz\n\n",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
