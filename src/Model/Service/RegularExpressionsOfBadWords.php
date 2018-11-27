@@ -46,7 +46,7 @@ class RegularExpressionsOfBadWords
             '/phuck/i',
             '/porn/i',
             '/p\s*u\s*s\s*s\s*y/i',
-            '/\bshit/i',
+            '/\bs\W*h\W*i\W*t/i',
             '/slut/i',
             '/suck( a)? dick/i',
             '/vagina/i',
