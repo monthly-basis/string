@@ -36,9 +36,9 @@ class ReplaceBadWordsTest extends TestCase
 
     public function testReplaceBadWords()
     {
-        $string = 'hello world Kushite s*h*i.t!';
+        $string = 'hello world Kushite s*h*i.t! s.hit sh*t shot doushite shtick';
         $this->assertSame(
-            'hello world Kushite !@#$%^&!',
+            'hello world Kushite !@#$%^&! !@#$%^& !@#$%^& shot doushite shtick',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
