@@ -51,7 +51,7 @@ class ContainsBadWordsTest extends TestCase
             $this->containsBadWordsService->containsBadWords($string)
         );
 
-        $string = 'dick tracy wharfage';
+        $string = 'dick tracy shtick';
         $this->assertFalse(
             $this->containsBadWordsService->containsBadWords($string)
         );

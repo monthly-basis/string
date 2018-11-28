@@ -62,7 +62,7 @@ class ReplaceBadWordsTest extends TestCase
 
         $string = "F-A-G foo faggot fagot bar DumbASS baz\n\n";
         $this->assertSame(
-            "!@#$%^& foo !@#$%^& !@#$%^& bar !@#$%^& baz\n\n",
+            "!@#$%^& foo !@#$%^&got !@#$%^&ot bar !@#$%^& baz\n\n",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
@@ -74,7 +74,7 @@ class ReplaceBadWordsTest extends TestCase
 
         $string = ' fag wharfage suck dick suck a dick dick tracy';
         $this->assertSame(
-            ' !@#$%^& wharfage !@#$%^& !@#$%^& dick tracy',
+            ' !@#$%^& whar!@#$%^&e !@#$%^& !@#$%^& dick tracy',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

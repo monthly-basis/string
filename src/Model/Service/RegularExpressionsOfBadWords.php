@@ -33,7 +33,7 @@ class RegularExpressionsOfBadWords
             '/dumbass/i',
             '/\bf\W*a\W*g\b/i',
             '/\bfuk\b/i',
-            '/fagg?ot/i',
+            '/fag/i',
             '/fap/i',
             '/f\W*(u\W*)?c\W*k/i',
             '/jackass/i',
