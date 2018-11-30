@@ -31,7 +31,7 @@ class RegularExpressionsOfBadWords
             '/asshole/i',
             '/bastard/i',
             '/b1tch/i',
-            '/bitch/i',
+            '/b\W*(i\W*)?t\W*c\W*h/i',
             '/\bboobs\b/i',
             '/bullshi?t/i',
             '/cock\s*suck/i',
