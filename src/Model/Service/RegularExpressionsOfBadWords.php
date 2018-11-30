@@ -19,6 +19,9 @@ class RegularExpressionsOfBadWords
     ): array {
         return [
             '/\bass\b/i',
+            '/a\$\$/i',
+            '/@ss/i',
+            '/@\$\$/i',
             '/asshole/i',
             '/bastard/i',
             '/b1tch/i',
