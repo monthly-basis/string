@@ -18,10 +18,16 @@ class RegularExpressionsOfBadWords
     public function getRegularExpressionsOfBadWords(
     ): array {
         return [
+            /*
+             * Cannot use word boundary (\b) around dollar sign because
+             * dollar sign is not a word character.
+             * So, just hard-code some variations for now.
+             */
             '/\bass\b/i',
             '/a\$\$/i',
             '/@ss/i',
             '/@\$\$/i',
+
             '/asshole/i',
             '/bastard/i',
             '/b1tch/i',
