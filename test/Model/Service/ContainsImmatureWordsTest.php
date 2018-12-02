@@ -27,6 +27,9 @@ class ContainsImmatureWordsTest extends TestCase
         $this->assertFalse(
             $this->containsImmatureWordsService->containsImmatureWords('hello world')
         );
+        $this->assertFalse(
+            $this->containsImmatureWordsService->containsImmatureWords('but far pop')
+        );
 
         $this->assertTrue(
             $this->containsImmatureWordsService->containsImmatureWords('b.u.t.t head')
