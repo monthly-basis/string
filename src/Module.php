@@ -77,6 +77,11 @@ class Module
                         $sm->get(StringService\RegularExpressionsOfBadWords::class)
                     );
                 },
+                StringService\ContainsImmatureWords::class => function ($sm) {
+                    return new StringService\ContainsImmatureWords(
+                        $sm->get(StringService\RegularExpressionsOfImmatureWords::class)
+                    );
+                },
                 StringService\Contains\CaseInsensitive::class => function ($serviceManager) {
                     return new StringService\Contains\CaseInsensitive();
                 },
@@ -99,6 +104,10 @@ class Module
                 },
                 StringService\RegularExpressionsOfBadWords::class => function ($serviceManager) {
                     return new StringService\RegularExpressionsOfBadWords(
+                    );
+                },
+                StringService\RegularExpressionsOfImmatureWords::class => function ($serviceManager) {
+                    return new StringService\RegularExpressionsOfImmatureWords(
                     );
                 },
                 StringService\ReplaceBadWords::class => function ($sm) {
