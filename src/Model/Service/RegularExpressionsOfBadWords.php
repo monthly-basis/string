@@ -30,7 +30,7 @@ class RegularExpressionsOfBadWords
 
             '/asshole/i',
             '/bastard/i',
-            '/b1tch/i',
+            '/b(1|l)tch/i',
             '/b\W*(i\W*)?t\W*c\W*h/i',
             '/\bboobs\b/i',
             '/bullshi?t/i',
@@ -48,8 +48,7 @@ class RegularExpressionsOfBadWords
             '/jackass/i',
             '/masturbat/i',
             '/my dick/i',
-            '/n1gg/i',
-            '/nigg/i',
+            '/n(1|i|l)gg/i',
             '/orgasm/i',
             '/penis/i',
             '/phuck/i',
