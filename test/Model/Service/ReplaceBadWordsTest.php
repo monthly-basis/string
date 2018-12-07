@@ -36,6 +36,14 @@ class ReplaceBadWordsTest extends TestCase
 
     public function testReplaceBadWords()
     {
+        $r = '!@#$%^&';
+
+        $string = "\t\tthis sentence has line breaks and no bad words\r\n\n";;
+        $this->assertSame(
+            $string,
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'hello world Kushite s*h*i.t! s.hit sh*t shot doushite shtick';
         $this->assertSame(
             'hello world Kushite !@#$%^&! !@#$%^& !@#$%^& shot doushite shtick',
@@ -60,9 +68,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = "F-A-G foo faggot fagot bar DumbASS baz\n\n";
+        $string = 'F-A-G foo faggot fagot bar DumbASS baz a$S';
         $this->assertSame(
-            "!@#$%^& foo !@#$%^&got !@#$%^&ot bar !@#$%^& baz\n\n",
+            "!@#$%^& foo !@#$%^&got !@#$%^&ot bar !@#$%^& baz $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

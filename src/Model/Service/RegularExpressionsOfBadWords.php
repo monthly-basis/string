@@ -24,7 +24,8 @@ class RegularExpressionsOfBadWords
              * So, just hard-code some variations for now.
              */
             '/\bass\b/i',
-            '/a\$\$/i',
+            '/a(s|\$)\$/i',
+            '/a\$(s|\$)/i',
             '/@ss/i',
             '/@\$\$/i',
 
