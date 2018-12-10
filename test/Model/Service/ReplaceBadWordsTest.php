@@ -104,9 +104,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'b!tch b.itch b.i.t.c.h b i t c h sunuvabitch b itch';
+        $string = 'suck my b!tch b.itch b.i.t.c.h b i t c h sunuvabitch b itch';
         $this->assertSame(
-            '!@#$%^& !@#$%^& !@#$%^& !@#$%^& sunuva!@#$%^& !@#$%^&',
+            '!@#$%^& !@#$%^& !@#$%^& !@#$%^& !@#$%^& sunuva!@#$%^& !@#$%^&',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
     }
