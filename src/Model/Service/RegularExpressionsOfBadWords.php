@@ -49,7 +49,7 @@ class RegularExpressionsOfBadWords
             '/jackass/i',
             '/masturbat/i',
             '/my dick/i',
-            '/n(1|i|l)gg/i',
+            '/n\W*(1|i|l)\W*g\W*g/i',
             '/orgasm/i',
             '/penis/i',
             '/phuck/i',
