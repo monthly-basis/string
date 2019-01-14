@@ -12,14 +12,15 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
-                    'containsBadWords'    => StringHelper\ContainsBadWords::class,
-                    'escape'              => StringHelper\Escape::class,
-                    'escapeAndReplaceBadWords' => StringHelper\EscapeAndReplaceBadWords::class,
-                    'shorten' => StringHelper\Shorten::class,
-                    'stripTagsAndKeepFirstWords' => StringHelper\StripTagsAndKeepFirstWords::class,
-                    'stripTagsAndShorten' => StringHelper\StripTagsAndShorten::class,
+                    'containsBadWords'                   => StringHelper\ContainsBadWords::class,
+                    'escape'                             => StringHelper\Escape::class,
+                    'escapeAndReplaceBadWords'           => StringHelper\EscapeAndReplaceBadWords::class,
+                    'getUrlFriendly'                     => StringHelper\UrlFriendly::class,
+                    'shorten'                            => StringHelper\Shorten::class,
+                    'stripTagsAndKeepFirstWords'         => StringHelper\StripTagsAndKeepFirstWords::class,
+                    'stripTagsAndShorten'                => StringHelper\StripTagsAndShorten::class,
                     'stripTagsReplaceBadWordsAndShorten' => StringHelper\StripTagsReplaceBadWordsAndShorten::class,
-                    'toHtml'              => StringHelper\ToHtml::class,
+                    'toHtml'                             => StringHelper\ToHtml::class,
                 ],
                 'factories' => [
                     StringHelper\ContainsBadWords::class => function ($serviceManager) {
@@ -61,6 +62,11 @@ class Module
                     StringHelper\ToHtml::class => function ($serviceManager) {
                         return new StringHelper\ToHtml(
                             $serviceManager->get(StringService\ToHtml::class)
+                        );
+                    },
+                    StringHelper\UrlFriendly::class => function ($serviceManager) {
+                        return new StringHelper\UrlFriendly(
+                            $serviceManager->get(StringService\UrlFriendly::class)
                         );
                     },
                 ],
