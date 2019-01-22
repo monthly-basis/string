@@ -17,7 +17,7 @@ class Shorten
         $string = preg_replace('/\s+/s', ' ', $string);
         $string = trim($string);
 
-        $string = wordwrap($string, $maxLength);
+        $string = wordwrap($string, $maxLength, "\n", true);
         $string = explode("\n", $string);
 
         return $string[0];
