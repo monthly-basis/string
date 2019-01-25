@@ -19,6 +19,12 @@ class RegularExpressionsOfBadWords
     ): array {
         return [
             /*
+             * Test string to trigger bad word detectors in production
+             * for users who should not have to type a bad word.
+             */
+            '/1jdl95qa/',
+
+            /*
              * Cannot use word boundary (\b) around dollar sign because
              * dollar sign is not a word character.
              * So, just hard-code some variations for now.
