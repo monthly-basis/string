@@ -21,7 +21,7 @@ class ToHtml
         $messageEscaped = $this->escapeService->escape($message);
 
         $pattern = '|(https?://(?!(www\.)?jiskha\.com)[^\s]+)|i';
-        $replacement = '<a href="$1" target="_blank" rel="external noopener">$1</a>';
+        $replacement = '<a href="$1" target="_blank" rel="nofollow external noopener">$1</a>';
         $messageEscaped = preg_replace($pattern, $replacement, $messageEscaped);
 
         $pattern = '|(https?://(?=(www\.)?jiskha\.com)[^\s]+)|i';
