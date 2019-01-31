@@ -53,6 +53,7 @@ class RegularExpressionsOfBadWords
             '/fap/i',
             '/f\W*u\W*c\W*k/i',
             '/\bf\W*c\W*k\b/i',
+            '/\bf off\b/i',
             '/jackass/i',
             '/masturbat/i',
             '/my dick/i',
