@@ -30,6 +30,7 @@ class RegularExpressionsOfBadWords
              * So, just hard-code some variations for now.
              */
             '/\bass\b/i',
+            '/\bazz\b/i',
             '/a(s|\$)\$/i',
             '/a\$(s|\$)/i',
             '/@ss/i',
