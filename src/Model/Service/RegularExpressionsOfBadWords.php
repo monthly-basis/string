@@ -48,9 +48,11 @@ class RegularExpressionsOfBadWords
             '/dammit/i',
             '/damnit/i',
             '/dumbass/i',
-            '/\bf\W+ck/i',
+
+            '/\bf\W+c?k/i',
             '/\bf\W*a\W*g\b/i',
             '/\bfuk\b/i',
+
             '/fag/i',
             '/fap/i',
             '/f\W*u\W*c\W*k/i',

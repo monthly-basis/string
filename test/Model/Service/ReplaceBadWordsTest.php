@@ -56,9 +56,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'shut the FuCk up p   u   s   sy fluck f.uck f*cking a ss';
+        $string = 'shut the FuCk up p   u   s   sy fluck f.uck f*cking a ss f**k';
         $this->assertSame(
-            "shut the !@#$%^& up !@#$%^& fluck !@#$%^& {$r}ing $r",
+            "shut the !@#$%^& up !@#$%^& fluck !@#$%^& {$r}ing $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
