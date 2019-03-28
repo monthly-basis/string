@@ -78,6 +78,9 @@ class Module
     {
         return [
             'factories' => [
+                StringService\CleanUpSpaces::class => function ($sm) {
+                    return new StringService\CleanUpSpaces();
+                },
                 StringService\ContainsBadWords::class => function ($sm) {
                     return new StringService\ContainsBadWords(
                         $sm->get(StringService\RegularExpressionsOfBadWords::class)
