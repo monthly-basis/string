@@ -47,6 +47,7 @@ class RegularExpressionsOfBadWords
             '/cunt/i',
             '/dammit/i',
             '/damnit/i',
+            '/d(i|!)ck/i',
             '/dumbass/i',
 
             '/\bf\W+c?k/i',
@@ -60,7 +61,6 @@ class RegularExpressionsOfBadWords
             '/\bf off\b/i',
             '/jackass/i',
             '/masturbat/i',
-            '/my dick/i',
             '/n\W*(1|i|l)\W*g\W*g/i',
             '/orgasm/i',
             '/penis/i',
@@ -69,7 +69,6 @@ class RegularExpressionsOfBadWords
             '/p\s*u\s*s\s*s\s*y/i',
             '/\bs\W*h(\W*i\W*|\W+)t/i',
             '/slut/i',
-            '/suck( a)? dick/i',
             '/suck my/i',
             '/vagina/i',
             '/wh0re/i',
