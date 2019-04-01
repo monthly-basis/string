@@ -80,7 +80,7 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = ' fag wharfage suck dick suck a dick dick tracy nigg n1gg nig g';
+        $string = ' fag wharfage suck dick suck a dick d!ck tracy nigg n1gg nig g';
         $this->assertSame(
             " $r whar{$r}e suck $r suck a $r $r tracy $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
