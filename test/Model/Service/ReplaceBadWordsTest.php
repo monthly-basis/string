@@ -109,5 +109,11 @@ class ReplaceBadWordsTest extends TestCase
             '!@#$%^& !@#$%^& !@#$%^& !@#$%^& !@#$%^& sunuva!@#$%^& !@#$%^&',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+
+        $string = 'F=kx';
+        $this->assertSame(
+            'F=kx',
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
     }
 }

@@ -49,13 +49,13 @@ class RegularExpressionsOfBadWords
             '/damnit/i',
             '/d(i|!)ck/i',
             '/dumbass/i',
+            '/fag/i',
+            '/fap/i',
 
-            '/\bf\W+c?k/i',
+            '/\bf[^\w\=]+c?k/i',
             '/\bf\W*a\W*g\b/i',
             '/\bfuk\b/i',
 
-            '/fag/i',
-            '/fap/i',
             '/f\W*u\W*c\W*k/i',
             '/\bf\W*c\W*k\b/i',
             '/\bf off\b/i',
