@@ -110,9 +110,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'F=kx';
+        $string = 'F=kx F/k';
         $this->assertSame(
-            'F=kx',
+            'F=kx F/k',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
     }

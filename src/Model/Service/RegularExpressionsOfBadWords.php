@@ -52,7 +52,8 @@ class RegularExpressionsOfBadWords
             '/fag/i',
             '/fap/i',
 
-            '/\bf[^\w\=]+c?k/i',
+            '/\bf[^\w\=\/]+k/i',
+            '/\bf\W+ck/i',
             '/\bf\W*a\W*g\b/i',
             '/\bfuk\b/i',
 
