@@ -49,7 +49,10 @@ class RegularExpressionsOfBadWords
             '/cunt/i',
             '/dammit/i',
             '/damnit/i',
+
             '/d(i|!)ck/i',
+            '/d[\!\#\*]{2}k/i',
+
             '/dumbass/i',
             '/fag/i',
             '/fap/i',

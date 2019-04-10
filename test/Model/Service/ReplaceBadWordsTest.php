@@ -122,6 +122,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'd**k d!#k d)/k d***k';
+        $this->assertSame(
+            "$r $r d)/k d***k",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'F=kx F/k';
         $this->assertSame(
             'F=kx F/k',
