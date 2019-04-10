@@ -33,6 +33,7 @@ class RegularExpressionsOfBadWords
             '/\bazz\b/i',
             '/a(s|\$)\$/i',
             '/a\$(s|\$)/i',
+            '/a\*\*/i',
             '/@ss/i',
             '/@\$\$/i',
 
