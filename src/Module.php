@@ -12,6 +12,7 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
+                    'cleanUpSpaces'                      => StringHelper\CleanUpSpaces::class,
                     'containsBadWords'                   => StringHelper\ContainsBadWords::class,
                     'escape'                             => StringHelper\Escape::class,
                     'escapeAndReplaceBadWords'           => StringHelper\EscapeAndReplaceBadWords::class,
@@ -23,6 +24,11 @@ class Module
                     'toHtml'                             => StringHelper\ToHtml::class,
                 ],
                 'factories' => [
+                    StringHelper\CleanUpSpaces::class => function ($sm) {
+                        return new StringHelper\CleanUpSpaces(
+                            $sm->get(StringService\CleanUpSpaces::class)
+                        );
+                    },
                     StringHelper\ContainsBadWords::class => function ($serviceManager) {
                         return new StringHelper\ContainsBadWords(
                             $serviceManager->get(StringService\ContainsBadWords::class)
