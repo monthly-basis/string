@@ -80,9 +80,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = ' fag wharfage suck dick suck a dick d!ck tracy nigg n1gg nig g';
+        $string = ' fag wharfage suck dick suck a dick d!ck tracy ';
         $this->assertSame(
-            " $r whar{$r}e suck $r suck a $r $r tracy $r $r $r",
+            " $r whar{$r}e suck $r suck a $r $r tracy ",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
@@ -131,6 +131,11 @@ class ReplaceBadWordsTest extends TestCase
         $string = 'F=kx F/k';
         $this->assertSame(
             'F=kx F/k',
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+        $string = 'nigg n1gg nig g n*i*99';
+        $this->assertSame(
+            "$r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
     }
