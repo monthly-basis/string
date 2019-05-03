@@ -26,14 +26,6 @@ class ReplaceBadWordsTest extends TestCase
         );
     }
 
-    public function testInitialize()
-    {
-        $this->assertInstanceOf(
-            StringService\ReplaceBadWords::class,
-            $this->replaceBadWordsService
-        );
-    }
-
     public function testReplaceBadWords()
     {
         $r = '!@#$%^&';
@@ -128,9 +120,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'F=kx F/k fuking';
+        $string = 'F=kx F/k fuking fvck';
         $this->assertSame(
-            "F=kx F/k $r",
+            "F=kx F/k $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
         $string = 'nigg n1gg nig g n*i*99 n!gga n ! g g a';

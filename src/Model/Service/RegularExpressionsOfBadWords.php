@@ -62,10 +62,10 @@ class RegularExpressionsOfBadWords
             '/\bf\W*a\W*g\b/i',
             '/\bfuk\b/i',
             '/fuking/i',
-
-            '/f\W*u\W*c\W*k/i',
+            '/f\W*(u|v)\W*c\W*k/i',
             '/\bf\W*c\W*k\b/i',
             '/\bf off\b/i',
+
             '/jackass/i',
             '/masturbat/i',
 
