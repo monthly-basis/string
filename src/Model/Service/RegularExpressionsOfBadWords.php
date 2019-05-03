@@ -61,6 +61,7 @@ class RegularExpressionsOfBadWords
             '/\bf\W+ck/i',
             '/\bf\W*a\W*g\b/i',
             '/\bfuk\b/i',
+            '/fuking/i',
 
             '/f\W*u\W*c\W*k/i',
             '/\bf\W*c\W*k\b/i',

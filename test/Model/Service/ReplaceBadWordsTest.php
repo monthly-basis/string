@@ -128,9 +128,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'F=kx F/k';
+        $string = 'F=kx F/k fuking';
         $this->assertSame(
-            'F=kx F/k',
+            "F=kx F/k $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
         $string = 'nigg n1gg nig g n*i*99';
