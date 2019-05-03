@@ -29,50 +29,50 @@ class Module
                             $sm->get(StringService\CleanUpSpaces::class)
                         );
                     },
-                    StringHelper\ContainsBadWords::class => function ($serviceManager) {
+                    StringHelper\ContainsBadWords::class => function ($sm) {
                         return new StringHelper\ContainsBadWords(
-                            $serviceManager->get(StringService\ContainsBadWords::class)
+                            $sm->get(StringService\ContainsBadWords::class)
                         );
                     },
-                    StringHelper\Escape::class => function ($serviceManager) {
+                    StringHelper\Escape::class => function ($sm) {
                         return new StringHelper\Escape(
-                            $serviceManager->get(StringService\Escape::class)
+                            $sm->get(StringService\Escape::class)
                         );
                     },
-                    StringHelper\EscapeAndReplaceBadWords::class => function ($serviceManager) {
+                    StringHelper\EscapeAndReplaceBadWords::class => function ($sm) {
                         return new StringHelper\EscapeAndReplaceBadWords(
-                            $serviceManager->get(StringService\Escape::class),
-                            $serviceManager->get(StringService\ReplaceBadWords::class)
+                            $sm->get(StringService\Escape::class),
+                            $sm->get(StringService\ReplaceBadWords::class)
                         );
                     },
-                    StringHelper\Shorten::class => function ($serviceManager) {
+                    StringHelper\Shorten::class => function ($sm) {
                         return new StringHelper\Shorten(
-                            $serviceManager->get(StringService\Shorten::class)
+                            $sm->get(StringService\Shorten::class)
                         );
                     },
-                    StringHelper\StripTagsAndKeepFirstWords::class => function ($serviceManager) {
+                    StringHelper\StripTagsAndKeepFirstWords::class => function ($sm) {
                         return new StringHelper\StripTagsAndKeepFirstWords(
-                            $serviceManager->get(StringService\StripTagsAndKeepFirstWords::class)
+                            $sm->get(StringService\StripTagsAndKeepFirstWords::class)
                         );
                     },
-                    StringHelper\StripTagsAndShorten::class => function ($serviceManager) {
+                    StringHelper\StripTagsAndShorten::class => function ($sm) {
                         return new StringHelper\StripTagsAndShorten(
-                            $serviceManager->get(StringService\StripTagsAndShorten::class)
+                            $sm->get(StringService\StripTagsAndShorten::class)
                         );
                     },
-                    StringHelper\StripTagsReplaceBadWordsAndShorten::class => function ($serviceManager) {
+                    StringHelper\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
                         return new StringHelper\StripTagsReplaceBadWordsAndShorten(
-                            $serviceManager->get(StringService\StripTagsReplaceBadWordsAndShorten::class)
+                            $sm->get(StringService\StripTagsReplaceBadWordsAndShorten::class)
                         );
                     },
-                    StringHelper\ToHtml::class => function ($serviceManager) {
+                    StringHelper\ToHtml::class => function ($sm) {
                         return new StringHelper\ToHtml(
-                            $serviceManager->get(StringService\ToHtml::class)
+                            $sm->get(StringService\ToHtml::class)
                         );
                     },
-                    StringHelper\UrlFriendly::class => function ($serviceManager) {
+                    StringHelper\UrlFriendly::class => function ($sm) {
                         return new StringHelper\UrlFriendly(
-                            $serviceManager->get(StringService\UrlFriendly::class)
+                            $sm->get(StringService\UrlFriendly::class)
                         );
                     },
                 ],
@@ -97,31 +97,31 @@ class Module
                         $sm->get(StringService\RegularExpressionsOfImmatureWords::class)
                     );
                 },
-                StringService\Contains\CaseInsensitive::class => function ($serviceManager) {
+                StringService\Contains\CaseInsensitive::class => function ($sm) {
                     return new StringService\Contains\CaseInsensitive();
                 },
-                StringService\EndsWith::class => function ($serviceManager) {
+                StringService\EndsWith::class => function ($sm) {
                     return new StringService\EndsWith();
                 },
-                StringService\Escape::class => function ($serviceManager) {
+                StringService\Escape::class => function ($sm) {
                     return new StringService\Escape();
                 },
-                StringService\KeepFirstWords::class => function ($serviceManager) {
+                StringService\KeepFirstWords::class => function ($sm) {
                     return new StringService\KeepFirstWords();
                 },
-                StringService\NGrams::class => function ($serviceManager) {
+                StringService\NGrams::class => function ($sm) {
                     return new StringService\NGrams();
                 },
-                StringService\NGrams\SortedByCount::class => function ($serviceManager) {
+                StringService\NGrams\SortedByCount::class => function ($sm) {
                     return new StringService\NGrams\SortedByCount(
-                        $serviceManager->get(StringService\NGrams::class)
+                        $sm->get(StringService\NGrams::class)
                     );
                 },
-                StringService\RegularExpressionsOfBadWords::class => function ($serviceManager) {
+                StringService\RegularExpressionsOfBadWords::class => function ($sm) {
                     return new StringService\RegularExpressionsOfBadWords(
                     );
                 },
-                StringService\RegularExpressionsOfImmatureWords::class => function ($serviceManager) {
+                StringService\RegularExpressionsOfImmatureWords::class => function ($sm) {
                     return new StringService\RegularExpressionsOfImmatureWords(
                     );
                 },
@@ -130,35 +130,35 @@ class Module
                         $sm->get(StringService\RegularExpressionsOfBadWords::class)
                     );
                 },
-                StringService\Shorten::class => function ($serviceManager) {
+                StringService\Shorten::class => function ($sm) {
                     return new StringService\Shorten();
                 },
-                StringService\StartsWith::class => function ($serviceManager) {
+                StringService\StartsWith::class => function ($sm) {
                     return new StringService\StartsWith();
                 },
-                StringService\StripTagsAndKeepFirstWords::class => function ($serviceManager) {
+                StringService\StripTagsAndKeepFirstWords::class => function ($sm) {
                     return new StringService\StripTagsAndKeepFirstWords();
                 },
-                StringService\StripTagsAndShorten::class => function ($serviceManager) {
+                StringService\StripTagsAndShorten::class => function ($sm) {
                     return new StringService\StripTagsAndShorten();
                 },
-                StringService\StripTagsReplaceBadWordsAndShorten::class => function ($serviceManager) {
+                StringService\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
                     return new StringService\StripTagsReplaceBadWordsAndShorten(
-                        $serviceManager->get(StringService\ReplaceBadWords::class)
+                        $sm->get(StringService\ReplaceBadWords::class)
                     );
                 },
-                StringService\ToHtml::class => function ($serviceManager) {
+                StringService\ToHtml::class => function ($sm) {
                     return new StringService\ToHtml(
-                        $serviceManager->get(StringService\Escape::class),
-                        $serviceManager->get(StringService\ReplaceBadWords::class)
+                        $sm->get(StringService\Escape::class),
+                        $sm->get(StringService\ReplaceBadWords::class)
                     );
                 },
-                StringService\UrlFriendly::class => function ($serviceManager) {
+                StringService\UrlFriendly::class => function ($sm) {
                     return new StringService\UrlFriendly();
                 },
-                StringService\Urls::class => function ($serviceManager) {
+                StringService\Urls::class => function ($sm) {
                     return new StringService\Urls(
-                        $serviceManager->get(StringService\StartsWith::class)
+                        $sm->get(StringService\StartsWith::class)
                     );
                 },
             ],
