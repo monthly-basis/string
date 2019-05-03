@@ -133,9 +133,9 @@ class ReplaceBadWordsTest extends TestCase
             "F=kx F/k $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
-        $string = 'nigg n1gg nig g n*i*99';
+        $string = 'nigg n1gg nig g n*i*99 n!gga n ! g g a';
         $this->assertSame(
-            "$r $r $r $r",
+            "$r $r $r $r {$r}a {$r} a",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
     }
