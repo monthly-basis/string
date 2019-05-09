@@ -69,7 +69,8 @@ class RegularExpressionsOfBadWords
             '/jackass/i',
             '/masturbat/i',
 
-            '/n\W*(1|i|l|\!)\W*(g|9)\W*(g|9)/i',
+            '/n\W*(1|i|l|\!)\W*g\W*g/i',
+            '/ni99/i',
 
             '/orgasm/i',
             '/penis/i',
