@@ -131,9 +131,16 @@ class ReplaceBadWordsTest extends TestCase
             "F=kx F/k $r $r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+
         $string = 'nigg n1gg nig g ni99 n!gga n ! g g a In 1999';
         $this->assertSame(
             "$r $r $r $r {$r}a {$r} a In 1999",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'competition TIT tits titties petit';
+        $this->assertSame(
+            "competition $r $r $r petit",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
     }

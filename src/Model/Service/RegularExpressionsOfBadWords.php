@@ -82,6 +82,10 @@ class RegularExpressionsOfBadWords
             '/\bs\W*h(\W*i\W*|\W+)t/i',
             '/slut/i',
             '/suck my/i',
+
+            '/\btits?\b/i',
+            '/titties/i',
+
             '/vagina/i',
             '/wh0re/i',
             '/whore/i',
