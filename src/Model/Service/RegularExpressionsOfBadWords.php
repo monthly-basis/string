@@ -31,13 +31,14 @@ class RegularExpressionsOfBadWords
              */
             '/\ba\s*s\s*s\b/i',
             '/\bazz\b/i',
+
             '/a(s|\$)\$/i',
             '/a\$(s|\$)/i',
             '/a\*\*/i',
             '/@ss/i',
             '/@\$\$/i',
+            '/as(s|\W)hole/i',
 
-            '/asshole/i',
             '/bastard/i',
             '/b(1|l)tch/i',
             '/b\W*(i\W*)?t\W*c\W*h/i',
