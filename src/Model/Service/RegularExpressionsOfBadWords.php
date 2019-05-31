@@ -42,7 +42,7 @@ class RegularExpressionsOfBadWords
             '/bastard/i',
             '/b(1|l)tch/i',
             '/b\W*(i\W*)?t\W*c\W*h/i',
-            '/bi(t|\W)ch/i',
+            '/bi(t|\W)?ch/i',
             '/\bboobs\b/i',
             '/bullshi?t/i',
             '/cock\s*suck/i',
