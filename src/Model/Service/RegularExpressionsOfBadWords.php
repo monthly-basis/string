@@ -55,7 +55,7 @@ class RegularExpressionsOfBadWords
             '/d[\!\#\*]{2}k/i',
 
             '/dumbass/i',
-            '/fag/i',
+            '/f(a|4)g/i',
             '/fap/i',
 
             '/\bf(\*\*\*|\-\-\-)/i',
