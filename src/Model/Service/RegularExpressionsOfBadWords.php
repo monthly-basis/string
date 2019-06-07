@@ -29,7 +29,7 @@ class RegularExpressionsOfBadWords
              * dollar sign is not a word character.
              * So, just hard-code some variations for now.
              */
-            '/\ba\s*s\s*s\b/i',
+            '/\ba\s*s\s*s(es)?\b/i',
             '/\bazz\b/i',
 
             '/a(s|\$)\$/i',
