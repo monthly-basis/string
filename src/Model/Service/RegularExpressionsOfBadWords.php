@@ -76,7 +76,9 @@ class RegularExpressionsOfBadWords
             '/ni99/i',
 
             '/orgasm/i',
-            '/penis/i',
+
+            '/peni(s|5)/i',
+
             '/phuck/i',
             '/porn/i',
             '/p\s*u\s*s\s*s\s*y/i',
