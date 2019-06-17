@@ -29,7 +29,7 @@ class RegularExpressionsOfBadWords
              * dollar sign is not a word character.
              * So, just hard-code some variations for now.
              */
-            '/\ba\s*s\s*s(es)?\b/i',
+            '/\ba\s*ss(es)?\b/i',
             '/\bazz\b/i',
 
             '/a(s|\$)\$/i',
@@ -82,7 +82,9 @@ class RegularExpressionsOfBadWords
             '/phuck/i',
             '/porn/i',
             '/p\s*u\s*s\s*s\s*y/i',
+
             '/\bs\W*h(\W*i\W*|\W+)t/i',
+
             '/slut/i',
             '/suck my/i',
 

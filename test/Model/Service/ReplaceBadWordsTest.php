@@ -108,9 +108,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = '@$$ asset asses assess as*hole pass';
+        $string = 'ass @$$ asset asses assess as*hole as S pass';
         $this->assertSame(
-            "$r asset $r assess $r pass",
+            "$r $r asset $r assess $r as S pass",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
