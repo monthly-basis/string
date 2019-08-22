@@ -50,7 +50,7 @@ class RegularExpressionsOfBadWords
             '/bullshi?t/i',
             '/cock\s*suck/i',
             '/\bcum\b/i',
-            '/cunt/i',
+            '/c(\W|\_)*unt/i',
             '/dammit/i',
             '/damnit/i',
 
