@@ -34,7 +34,7 @@ class RegularExpressionsOfBadWords
 
             '/a(s|\$)\$/i',
             '/a\$(s|\$)/i',
-            '/a\*\*/i',
+            '/\ba\*\*/i',
             '/@ss/i',
             '/@\$\$/i',
             '/as(s|\W)hole/i',
@@ -58,6 +58,7 @@ class RegularExpressionsOfBadWords
             '/d[\!\#\*]{2}k/i',
 
             '/dumbass/i',
+            '/dumba\W\W/i',
             '/f(a|4)g/i',
             '/fap/i',
 
