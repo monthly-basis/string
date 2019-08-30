@@ -22,7 +22,7 @@ class RegularExpressionsOfBadWords
              * Test string to trigger bad word detectors in production
              * for users who should not have to type a bad word.
              */
-            '/1jdl95qa/',
+            '/ozeybhv/',
 
             /*
              * Cannot use word boundary (\b) around dollar sign because
