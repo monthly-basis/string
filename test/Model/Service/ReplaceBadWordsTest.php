@@ -78,9 +78,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'fukuyama fuk foo cucumber cum boobs pron porn of office';
+        $string = 'fukuyama fuk foo cucumber cum boobs pron porn poɾn of office';
         $this->assertSame(
-            'fukuyama !@#$%^& foo cucumber !@#$%^& !@#$%^& pron !@#$%^& of office',
+            "fukuyama !@#$%^& foo cucumber !@#$%^& !@#$%^& pron $r $r of office",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
