@@ -161,5 +161,11 @@ class ReplaceBadWordsTest extends TestCase
             "competition $r $r $r petit",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+
+        $string = 'xvideos.com';
+        $this->assertSame(
+            "$r.com",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
     }
 }
