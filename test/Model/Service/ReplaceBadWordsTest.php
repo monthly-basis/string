@@ -126,9 +126,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'dick d**k d!#k d)/k d***k Emily Dickinson';
+        $string = 'dick dikk d**k d!#k d)/k d***k Emily Dickinson';
         $this->assertSame(
-            "$r $r $r d)/k d***k Emily Dickinson",
+            "$r $r $r $r d)/k d***k Emily Dickinson",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
