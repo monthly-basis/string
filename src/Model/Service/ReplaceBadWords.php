@@ -17,6 +17,7 @@ class ReplaceBadWords
         $patterns    = $this->regularExpressionsOfBadWords
                             ->getRegularExpressionsOfBadWords();
         $replacement = '!@#$%^&';
-        return preg_replace($patterns, $replacement, $string);
+        $string = preg_replace($patterns, $replacement, $string);
+        return is_null($string) ? '' : $string;
     }
 }
