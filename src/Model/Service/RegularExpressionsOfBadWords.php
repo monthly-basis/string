@@ -87,7 +87,7 @@ class RegularExpressionsOfBadWords
             '/po(r|ɾ)n/i',
             '/p\s*u\s*s\s*s\s*y/i',
 
-            '/\bs\W*h(\W*i\W*|\W+)t/i',
+            '/\bs\W*h(\W*(i|1)\W*|\W+)t/i',
 
             '/slut/i',
             '/suck my/i',
