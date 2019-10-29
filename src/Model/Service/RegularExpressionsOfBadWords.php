@@ -62,7 +62,7 @@ class RegularExpressionsOfBadWords
             '/f(a|4)g/i',
             '/fap/i',
 
-            '/\bf(\*\*\*|\-\-\-)/i',
+            '/\bf(###|\*\*\*|\-\-\-)/i',
             '/\bf[^\w\=\/]+k/i',
             '/\bf\W+ck/i',
             '/\bf\W*a\W*g\b/i',
