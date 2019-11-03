@@ -42,9 +42,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'hclkafck fck fuck you F U C K f.uck f-u-c----k f*ck f.ck ummm';
+        $string = 'hclkafck fck you F U C K f.uck f-u-c----k f*ck f.ck ummm';
         $this->assertSame(
-            "hclkafck $r !@#$%^& you !@#$%^& !@#$%^& !@#$%^& !@#$%^& !@#$%^& ummm",
+            "hclkafck $r you !@#$%^& !@#$%^& !@#$%^& !@#$%^& !@#$%^& ummm",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
@@ -138,9 +138,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'f = 123 fuc F=kx F/k fuking fvck f### f*** f--- fu*king Confucius';
+        $string = 'fuck fukin f = 123 fuc F=kx F/k fuking fvck f### f*** f--- fu*king Confucius';
         $this->assertSame(
-            "f = 123 $r F=kx F/k $r $r $r $r $r $r Confucius",
+            "$r $r f = 123 $r F=kx F/k $r $r $r $r $r $r Confucius",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
