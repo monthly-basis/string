@@ -168,6 +168,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'xhamster.com';
+        $this->assertSame(
+            "$r.com",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'xvideos.com';
         $this->assertSame(
             "$r.com",
