@@ -8,14 +8,10 @@ class StripTagsAndShortenTest extends TestCase
 {
     protected function setUp()
     {
-        $this->stripTagsAndShortenService = new StringService\StripTagsAndShorten();
-    }
+        $this->shortenService = new StringService\Shorten();
 
-    public function testInitialize()
-    {
-        $this->assertInstanceOf(
-            StringService\StripTagsAndShorten::class,
-            $this->stripTagsAndShortenService
+        $this->stripTagsAndShortenService = new StringService\StripTagsAndShorten(
+            $this->shortenService
         );
     }
 
@@ -34,6 +30,14 @@ class StripTagsAndShortenTest extends TestCase
             $this->stripTagsAndShortenService->stripTagsAndShorten(
                 $string,
                 11
+            )
+        );
+
+        $this->assertSame(
+            'hel',
+            $this->stripTagsAndShortenService->stripTagsAndShorten(
+                $string,
+                3
             )
         );
     }

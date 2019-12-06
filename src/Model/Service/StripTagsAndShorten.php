@@ -1,19 +1,24 @@
 <?php
 namespace LeoGalleguillos\String\Model\Service;
 
+use LeoGalleguillos\String\Model\Service as StringService;
+
 class StripTagsAndShorten
 {
+    public function __construct(
+        StringService\Shorten $shortenService
+    ) {
+        $this->shortenService = $shortenService;
+    }
+
     public function stripTagsAndShorten(
         string $string,
         int $maxLength
     ) : string {
         $string = strip_tags($string);
-        $string = preg_replace('/\s+/s', ' ', $string);
-        $string = trim($string);
-
-        $string = wordwrap($string, $maxLength);
-        $string = explode("\n", $string);
-
-        return $string[0];
+        return $this->shortenService->shorten(
+            $string,
+            $maxLength
+        );
     }
 }

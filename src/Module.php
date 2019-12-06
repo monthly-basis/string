@@ -140,7 +140,9 @@ class Module
                     return new StringService\StripTagsAndKeepFirstWords();
                 },
                 StringService\StripTagsAndShorten::class => function ($sm) {
-                    return new StringService\StripTagsAndShorten();
+                    return new StringService\StripTagsAndShorten(
+                        $sm->get(StringService\Shorten::class)
+                    );
                 },
                 StringService\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
                     return new StringService\StripTagsReplaceBadWordsAndShorten(
