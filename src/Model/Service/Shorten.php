@@ -3,13 +3,6 @@ namespace LeoGalleguillos\String\Model\Service;
 
 class Shorten
 {
-    /**
-     * Shorten
-     *
-     * @param string $string
-     * @param int $maxLength
-     * @return string
-     */
     public function shorten(
         string $string,
         int $maxLength

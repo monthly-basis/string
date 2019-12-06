@@ -144,7 +144,8 @@ class Module
                 },
                 StringService\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
                     return new StringService\StripTagsReplaceBadWordsAndShorten(
-                        $sm->get(StringService\ReplaceBadWords::class)
+                        $sm->get(StringService\ReplaceBadWords::class),
+                        $sm->get(StringService\Shorten::class)
                     );
                 },
                 StringService\ToHtml::class => function ($sm) {
