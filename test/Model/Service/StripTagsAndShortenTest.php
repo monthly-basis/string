@@ -18,6 +18,7 @@ class StripTagsAndShortenTest extends TestCase
     public function testGetUrls()
     {
         $string = 'hello world';
+
         $this->assertSame(
             'hello',
             $this->stripTagsAndShortenService->stripTagsAndShorten(
@@ -25,6 +26,7 @@ class StripTagsAndShortenTest extends TestCase
                 7
             )
         );
+
         $this->assertSame(
             'hello world',
             $this->stripTagsAndShortenService->stripTagsAndShorten(
