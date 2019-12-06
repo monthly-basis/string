@@ -11,11 +11,6 @@ class UrlFriendlyTest extends TestCase
         $this->urlFriendlyService = new UrlFriendly();
     }
 
-    public function testInitialize()
-    {
-        $this->assertInstanceOf(UrlFriendly::class, $this->urlFriendlyService);
-    }
-
     public function testGetUrlFriendly()
     {
         $this->assertSame(
@@ -42,6 +37,12 @@ class UrlFriendlyTest extends TestCase
         $string = '\'-!@$!@$';
         $this->assertSame(
             '-',
+            $this->urlFriendlyService->getUrlFriendly($string)
+        );
+
+        $string = 'Capital word and <html> tag';
+        $this->assertSame(
+            'capital-word-and-html-tag',
             $this->urlFriendlyService->getUrlFriendly($string)
         );
     }

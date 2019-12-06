@@ -22,6 +22,7 @@ class UrlFriendly
             return '-';
         }
 
-        return $string;
+        // Return lowercase version of string.
+        return strtolower($string);
     }
 }
