@@ -9,12 +9,14 @@ use PHPUnit\Framework\TestCase;
  *
  * The following code contains extremely explicit language.
  *
- * We have written code to replace bad words posted by users with !@#$%^&.
+ * We have written code this code to prevent users from publicly posting
+ * foul, vulgar, and offesnive language.
  *
  * In order to ensure that this code is functioning properly,
  * we must use explicit language in our own code.
  *
- * Sorry.
+ * We sincerely apologize in advance if this code offends anyone.
+ * Unfortunately, it is necessary in order to filter out this language.
  */
 class ReplaceBadWordsTest extends TestCase
 {
@@ -144,9 +146,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'nigg n1gg nig g ni99 n!gga n ! g g a In 1999 ɴigg';
+        $string = 'nigg n1gg nig g ni99 n!gga n ! g g a In 1999 ɴigg n¡gg';
         $this->assertSame(
-            "$r $r $r $r {$r}a {$r} a In 1999 $r",
+            "$r $r $r $r {$r}a {$r} a In 1999 $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
