@@ -73,6 +73,7 @@ class RegularExpressionsOfBadWords
             '/\bf off\b/i',
             '/\bfuc/i',
 
+            '/god ?damn/i',
             '/jackass/i',
             '/masturbat/i',
             '/\bmilf\b/i',
