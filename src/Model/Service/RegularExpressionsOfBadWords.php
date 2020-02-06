@@ -80,6 +80,7 @@ class RegularExpressionsOfBadWords
 
             '/(n|ɴ)\W*(1|i|l|\!|\¡)\W*g\W*g/i',
             '/ni99/i',
+            '/niglet/i',
 
             '/orgasm/i',
 
