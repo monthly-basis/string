@@ -45,6 +45,7 @@ class RegularExpressionsOfBadWords
             '/b\W*(i\W*)?t\W*c\W*h/i',
             '/bi+(t|\W)?ch/i',
             '/bicth/i',
+            '/bi\dch/i',
 
             '/\bboobs\b/i',
             '/bullshi?t/i',
