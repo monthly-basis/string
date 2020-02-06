@@ -140,6 +140,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'foreskin';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'fuck fukin f = 123 fuc F=kx F/k fuking fvck f### f*** f--- fu*king Confucius';
         $this->assertSame(
             "$r $r f = 123 $r F=kx F/k $r $r $r $r $r $r Confucius",
