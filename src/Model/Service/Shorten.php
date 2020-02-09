@@ -7,7 +7,7 @@ class Shorten
         string $string,
         int $maxLength
     ): string {
-        $string = preg_replace('/\s+/s', ' ', $string);
+        $string = preg_replace('/\s+/su', ' ', $string);
         $string = trim($string);
 
         $string = wordwrap($string, $maxLength, "\n", true);

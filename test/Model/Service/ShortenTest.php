@@ -52,5 +52,18 @@ class ShortenTest extends TestCase
                 32
             )
         );
+
+$string = <<<STRING
+Welcome to the string with
+awesome linebreaks. Isn't this
+just fantastic.
+STRING;
+        $this->assertSame(
+            'Welcome to the string with awesome linebreaks. Isn\'t this just',
+            $this->shortenService->shorten(
+                $string,
+                64
+            )
+        );
     }
 }
