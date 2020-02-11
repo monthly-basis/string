@@ -79,6 +79,7 @@ class RegularExpressionsOfBadWords
             '/god ?damn/i',
             '/jigaboo/i',
             '/jackass/i',
+            '/kike/i',
             '/masturbat/i',
             '/\bmilf\b/i',
 
