@@ -116,9 +116,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'bitch bi*ch bich bicth biitch Bi9ch';
+        $string = 'bitch bi*ch bich bicth biitch Bi9ch b***h';
         $this->assertSame(
-            "$r $r $r $r $r $r",
+            "$r $r $r $r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
