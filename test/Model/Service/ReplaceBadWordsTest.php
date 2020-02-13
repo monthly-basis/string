@@ -146,9 +146,15 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'fuck fukin f = 123 fuc F=kx F/k fuking fvck f### f*** f--- fu*king Confucius';
+        $string = 'fuck fukin f = 123 fuc F=kx F/k fuking fvck f### f*** f---';
         $this->assertSame(
-            "$r $r f = 123 $r F=kx F/k $r $r $r $r $r $r Confucius",
+            "$r $r f = 123 $r F=kx F/k $r $r $r $r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'fu*king Confucius John F. Kennedy';
+        $this->assertSame(
+            "$r Confucius John F. Kennedy",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

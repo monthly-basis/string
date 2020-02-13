@@ -66,7 +66,7 @@ class RegularExpressionsOfBadWords
             '/foreskin/i',
 
             '/\bf(###|\*\*\*|\-\-\-)/i',
-            '/\bf[^\w\=\/]+k/i',
+            '/\bf[^\w\=\/ ]+k/i',
             '/\bf\W+ck/i',
             '/\bf\W*a\W*g\b/i',
             '/\bfu\W?k\b/i',
