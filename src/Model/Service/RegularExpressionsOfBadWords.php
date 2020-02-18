@@ -31,13 +31,13 @@ class RegularExpressionsOfBadWords
              */
             '/\ba\s*ss(es)?\b/i',
             '/\bazz\b/i',
-
             '/a(s|\$)\$/i',
             '/a\$(s|\$)/i',
             '/\ba\*\*/i',
             '/@ss/i',
             '/@\$\$/i',
             '/as(s|\W)hole/i',
+            '/a§š/i',
 
             '/bastard/i',
 
