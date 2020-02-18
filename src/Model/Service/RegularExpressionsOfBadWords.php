@@ -56,7 +56,7 @@ class RegularExpressionsOfBadWords
             '/dammit/i',
             '/damnit/i',
 
-            '/d(i|!)(c|k)k\b/i',
+            '/d\W?(i|!)(c|k)k\b/i',
             '/d[\!\#\*]{2}k/i',
 
             '/dumbass/i',
