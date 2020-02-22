@@ -99,7 +99,7 @@ class RegularExpressionsOfBadWords
 
             '/\bs\W*h(\W*(i|1)\W*|\W+)t/i',
 
-            '/sl(u|ü)t/i',
+            '/s(l|1)(u|ü)t/i',
             '/suck my/i',
 
             '/\btits?\b/i',

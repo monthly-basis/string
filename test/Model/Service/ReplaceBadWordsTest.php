@@ -206,9 +206,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'SLUT slüt';
+        $string = 'slut SLUT slüt s1ut';
         $this->assertSame(
-            "$r $r",
+            "$r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
