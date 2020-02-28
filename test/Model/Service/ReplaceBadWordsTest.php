@@ -122,9 +122,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'cunt c__unt c*nt';
+        $string = 'cunt c__unt c*nt c u n t s';
         $this->assertSame(
-            "$r $r $r",
+            "$r $r $r $r s",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
