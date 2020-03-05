@@ -37,6 +37,7 @@ class RegularExpressionsOfBadWords
             '/@ss/i',
             '/@\$\$/i',
             '/as(s|\W)hole/i',
+            '/\ba holes\b/i',
             '/a§š/i',
 
             '/bastard/i',
