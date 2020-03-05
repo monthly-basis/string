@@ -49,6 +49,8 @@ class RegularExpressionsOfBadWords
             '/bi\dch/i',
             '/b\*\*\*(\*|h)/i',
 
+            '/blow\s?job/i',
+
             '/\bboobs\b/i',
             '/bullshi?t/i',
             '/cock\s*suck/i',
@@ -115,9 +117,5 @@ class RegularExpressionsOfBadWords
             '/xhamster/i',
             '/xvideos/i',
         ];
-
-        /*
-         * \bass\b, blow(\s)?job, goddamn
-         **/
     }
 }
