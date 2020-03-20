@@ -128,6 +128,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'clit classiclit';
+        $this->assertSame(
+            "$r classiclit",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'cunt c__unt c*nt c u n t s';
         $this->assertSame(
             "$r $r $r $r s",

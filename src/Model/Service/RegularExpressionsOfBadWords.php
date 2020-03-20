@@ -53,6 +53,7 @@ class RegularExpressionsOfBadWords
 
             '/\bboobs\b/i',
             '/bullshi?t/i',
+            '/\bclit\b/i',
             '/cock\s*suck/i',
             '/\bcum\b/i',
 
