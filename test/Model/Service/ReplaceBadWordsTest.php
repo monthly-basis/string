@@ -188,9 +188,14 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'nigg n1gg nig g ni99 n!gga n ! g g a In 1999 ɴigg n¡gg nigleT nig night';
+        $string = 'nigg n1gg nig g ni99 n!gga n ! g g a In 1999 ɴigg n¡gg';
         $this->assertSame(
-            "$r $r $r $r {$r}a {$r} a In 1999 $r $r $r $r night",
+            "$r $r $r $r {$r}a {$r} a In 1999 $r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+        $string = ' nigleT nig night nicker';
+        $this->assertSame(
+            " $r $r night $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

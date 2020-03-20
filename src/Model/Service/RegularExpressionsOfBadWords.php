@@ -90,6 +90,7 @@ class RegularExpressionsOfBadWords
 
             '/(n|ɴ)\W*(1|i|l|\!|\¡)\W*g\W*g/i',
             '/ni99/i',
+            '/\bnicker\b/i',
             '/niglet/i',
             '/\bnig\b/i',
 
