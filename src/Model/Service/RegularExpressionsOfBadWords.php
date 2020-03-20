@@ -68,6 +68,7 @@ class RegularExpressionsOfBadWords
             '/dumba\W\W/i',
             '/f(a|4)g/i',
             '/fap/i',
+            '/fleshlight/i',
             '/foreskin/i',
 
             '/\bf(###|\*\*\*|\-\-\-)/i',
