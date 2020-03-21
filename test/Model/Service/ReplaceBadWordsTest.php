@@ -205,9 +205,9 @@ class ReplaceBadWordsTest extends TestCase
             "$r $r $r $r {$r}a {$r} a In 1999 $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
-        $string = ' nigleT nig night nicker';
+        $string = ' nigleT nig night nicker nggas';
         $this->assertSame(
-            " $r $r night $r",
+            " $r $r night $r {$r}s",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
