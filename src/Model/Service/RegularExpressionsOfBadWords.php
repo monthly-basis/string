@@ -94,6 +94,7 @@ class RegularExpressionsOfBadWords
             '/ngga/i',
             '/ni99/i',
             '/\bnicker\b/i',
+            '/nick gurr/i',
             '/niglet/i',
             '/\bnig\b/i',
 
