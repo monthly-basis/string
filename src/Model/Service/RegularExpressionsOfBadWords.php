@@ -103,7 +103,7 @@ class RegularExpressionsOfBadWords
             '/peni(s|5)/i',
 
             '/phuck/i',
-            '/po(r|ɾ)n/i',
+            '/p\s*o\s*(r|ɾ)\s*n/i',
 
             '/p\s*u\s*s\s*s\s*y/i',
             '/p\W*u\W*s\W*s\W*y/i',

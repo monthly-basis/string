@@ -80,9 +80,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'fukuyama fuk foo cucumber cum boobs pron porn poɾn of office';
+        $string = 'fukuyama fuk foo cucumber cum boobs';
         $this->assertSame(
-            "fukuyama !@#$%^& foo cucumber !@#$%^& !@#$%^& pron $r $r of office",
+            "fukuyama !@#$%^& foo cucumber !@#$%^& !@#$%^&",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
@@ -170,9 +170,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'fu*king Confucius John F. Kennedy Fuecking';
+        $string = 'fu*king Confucius John F. Kennedy Fuecking of office';
         $this->assertSame(
-            "$r Confucius John F. Kennedy {$r}ing",
+            "$r Confucius John F. Kennedy {$r}ing of office",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
@@ -214,6 +214,12 @@ class ReplaceBadWordsTest extends TestCase
         $string = 'penis Peni5 pennies';
         $this->assertSame(
             "$r $r pennies",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'porn P O R N pron';
+        $this->assertSame(
+            "$r $r pron",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
