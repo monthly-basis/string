@@ -134,9 +134,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'cunt c__unt c*nt c u n t s';
+        $string = 'cunt c__unt c*nt c u n t s etc until';
         $this->assertSame(
-            "$r $r $r $r s",
+            "$r $r $r $r s etc until",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
