@@ -76,9 +76,10 @@ class RegularExpressionsOfBadWords
             '/\bf[^\w\=\/ ]+k/i',
             '/\bf\W+ck/i',
             '/\bf\W*a\W*g\b/i',
+
             '/\bfu\W?k\b/i',
             '/fu\W?king?/i',
-            '/f\W*(u|v)e?\W*c\W*k/i',
+            '/f(_|\W)*(u|v)e?\W*c\W*k/i',
             '/\bf\W*c\W*k\b/i',
             '/\bf off\b/i',
             '/\bfuc/i',

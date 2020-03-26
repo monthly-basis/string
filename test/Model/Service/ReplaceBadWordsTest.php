@@ -170,9 +170,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'fu*king Confucius John F. Kennedy Fuecking of office';
+        $string = 'fu*king Confucius John F. Kennedy Fuecking of office f_uck';
         $this->assertSame(
-            "$r Confucius John F. Kennedy {$r}ing of office",
+            "$r Confucius John F. Kennedy {$r}ing of office $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
