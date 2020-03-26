@@ -79,7 +79,13 @@ class RegularExpressionsOfBadWords
 
             '/\bfu\W?k\b/i',
             '/fu\W?king?/i',
-            '/f(_|\W)*(u|v)e?\W*c\W*k/i',
+
+            // Whitespace
+            '/f(\W)*(u|v)e?\W*c\W*k/i',
+
+            // Symbols
+            '/\bf_u?ck/i',
+
             '/\bf\W*c\W*k\b/i',
             '/\bf off\b/i',
             '/\bfuc/i',
