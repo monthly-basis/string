@@ -32,6 +32,11 @@ class ToHtml
         $replacement    = '<$1$2>';
         $messageEscaped = preg_replace($pattern, $replacement, $messageEscaped);
 
+        // Replace 3 or more line breaks with just 2 line breaks.
+        $pattern = '/(\r\n){3,}/s';
+        $replacement = "\r\n\r\n";
+        $messageEscaped = preg_replace($pattern, $replacement, $messageEscaped);
+
         return nl2br($messageEscaped);
     }
 }
