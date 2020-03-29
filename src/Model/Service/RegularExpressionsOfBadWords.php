@@ -48,6 +48,7 @@ class RegularExpressionsOfBadWords
             '/bicth/i',
             '/bi\dch/i',
             '/b\*\*\*(\*|h)/i',
+            '/biyach/i',
 
             '/blow\s?job/i',
 
