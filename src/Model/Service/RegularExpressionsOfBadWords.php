@@ -112,7 +112,7 @@ class RegularExpressionsOfBadWords
 
             '/phuck/i',
 
-            '/p\s*o\s*(r|ɾ)\s*n/i',
+            '/\bp\s*o\s*(r|ɾ)\s*n/i',
             '/\bp(o|\W)rn/i',
 
             '/p\s*u\s*s\s*s\s*y/i',
