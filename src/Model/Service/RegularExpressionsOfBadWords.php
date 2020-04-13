@@ -43,7 +43,7 @@ class RegularExpressionsOfBadWords
             '/bastard/i',
 
             '/b(1|l)tch/i',
-            '/b\W*(i\W*)?t\W*c\W*h/i',
+            '/b\W*(i\W*)?t\W*c\W*h\b/i',
             '/bi+(t|\W)?ch/i',
             '/bicth/i',
             '/bi\dch/i',
