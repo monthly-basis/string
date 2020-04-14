@@ -105,6 +105,7 @@ class RegularExpressionsOfBadWords
             '/nick gurr/i',
             '/niglet/i',
             '/\bnig\b/i',
+            '/nogger/i',
 
             '/orgasm/i',
 
