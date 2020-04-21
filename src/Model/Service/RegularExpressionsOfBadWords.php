@@ -128,8 +128,7 @@ class RegularExpressionsOfBadWords
             '/titties/i',
 
             '/vagina/i',
-            '/wh0re/i',
-            '/whore/i',
+            '/w\s*h\s*(o|0)\s*r\s*e/i',
             '/xhamster/i',
             '/xvideos/i',
         ];

@@ -253,9 +253,15 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'competition TIT tits titties petit';
+        $string = 'tit competition TITS titties petit';
         $this->assertSame(
-            "competition $r $r $r petit",
+            "$r competition $r $r petit",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'whore WH0RE w h o r e';
+        $this->assertSame(
+            "$r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
