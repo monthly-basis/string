@@ -24,6 +24,7 @@ class RegularExpressionsOfBadWords
              */
             '/ozeybhv/',
 
+            '/8={2,}D/i',
             /*
              * Cannot use word boundary (\b) around dollar sign because
              * dollar sign is not a word character.
