@@ -82,6 +82,9 @@ class RegularExpressionsOfBadWords
             '/\bfu\W?k\b/i',
             '/fu\W?king?/i',
 
+            // Foreign alphabets
+            '/ƒμςκ/i',
+
             // Whitespace
             '/f(\W)*(u|v)e?\W*c\W*k/i',
 
