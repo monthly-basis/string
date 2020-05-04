@@ -75,7 +75,7 @@ class RegularExpressionsOfBadWords
             '/foreskin/i',
 
             '/\bf(###|\*\*\*|\-\-\-)/i',
-            '/\bf[^\w\=\/ ]+k/i',
+            '/\bf[^\w\=\/\( ]+k/i',
             '/\bf\W+ck/i',
             '/\bf\W*a\W*g\b/i',
 
@@ -85,12 +85,11 @@ class RegularExpressionsOfBadWords
             // Foreign alphabets
             '/ƒμςκ/i',
 
-            // Whitespace
-            '/f(\W)*(u|v)e?\W*c\W*k/i',
 
             // Symbols
             '/\bf_u?ck/i',
 
+            '/f(\W)*(u|v)e?\W*c\W*k/i',
             '/\bf\W*c\W*k\b/i',
             '/\bf off\b/i',
             '/\bfuc/i',
