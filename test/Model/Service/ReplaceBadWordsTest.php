@@ -116,9 +116,15 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'ass @$$ asset asses assess as*hole as S pass area** a§š A HOLES a hole';
+        $string = 'ass @$$ asset asses assess as*hole as S pass area** a§š';
         $this->assertSame(
-            "$r $r asset $r assess $r as S pass area** $r {$r} a hole",
+            "$r $r asset $r assess $r as S pass area** $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'A HOLES a hole has holes';
+        $this->assertSame(
+            "$r a hole has holes",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
