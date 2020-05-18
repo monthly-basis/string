@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class StripTagsAndShortenTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->shortenService = new StringService\Shorten();
 

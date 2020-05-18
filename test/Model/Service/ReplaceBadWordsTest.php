@@ -20,7 +20,7 @@ use PHPUnit\Framework\TestCase;
  */
 class ReplaceBadWordsTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->regularExpressionsOfBadWordsService = new StringService\RegularExpressionsOfBadWords();
         $this->replaceBadWordsService = new StringService\ReplaceBadWords(

@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class UrlsTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->startsWithService = new StringService\StartsWith();
         $this->urlsService = new StringService\Urls(

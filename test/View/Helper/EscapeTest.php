@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class EscapeTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->escapeService = new StringService\Escape();
         $this->escapeHelper = new StringHelper\Escape(

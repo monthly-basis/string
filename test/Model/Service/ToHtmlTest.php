@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class ToHtmlTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->replaceBadWordsServiceMock = $this->createMock(
             StringService\ReplaceBadwords::class

@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class StripTagsAndKeepFirstWordsTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->stripTagsAndKeepFirstWordsService = new StringService\StripTagsAndKeepFirstWords();
     }

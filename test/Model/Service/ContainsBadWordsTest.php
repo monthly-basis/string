@@ -18,7 +18,7 @@ use PHPUnit\Framework\TestCase;
  */
 class ContainsBadWordsTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->regularExpressionsOfBadWordsService = new StringService\RegularExpressionsOfBadWords();
         $this->containsBadWordsService = new StringService\ContainsBadWords(

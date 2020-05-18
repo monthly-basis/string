@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class NGramsTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->nGramsService = new StringService\NGrams();
     }

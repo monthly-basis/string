@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class ContainsImmatureWordsTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->regularExpressionsOfImmatureWordsService = new StringService\RegularExpressionsOfImmatureWords();
         $this->containsImmatureWordsService = new StringService\ContainsImmatureWords(

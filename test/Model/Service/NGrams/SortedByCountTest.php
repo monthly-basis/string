@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class SortedByCountTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->nGramsServiceMock = $this->createMock(
             StringService\NGrams::class
