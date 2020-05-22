@@ -103,7 +103,7 @@ class RegularExpressionsOfBadWords
 
             '/(n|ɴ)\W*(1|i|l|\!|\¡)\W*g\W*g/i',
             '/ngga/i',
-            '/ni99/i',
+            '/n(i|!)99/i',
             '/\bnicker\b/i',
             '/nick gurr/i',
             '/niglet/i',
