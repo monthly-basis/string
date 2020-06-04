@@ -94,6 +94,8 @@ class RegularExpressionsOfBadWords
             '/\bf off\b/i',
             '/\bfuc/i',
 
+            '/\bhorny/i',
+
             '/god ?damn/i',
             '/jigaboo/i',
             '/jackass/i',
