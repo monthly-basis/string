@@ -85,7 +85,6 @@ class RegularExpressionsOfBadWords
             // Foreign alphabets
             '/ƒμςκ/i',
 
-
             // Symbols
             '/\bf_u?ck/i',
 
@@ -94,6 +93,7 @@ class RegularExpressionsOfBadWords
             '/\bf off\b/i',
             '/\bfuc/i',
 
+            '/\bhoe/i',
             '/\bhorny/i',
 
             '/god ?damn/i',
