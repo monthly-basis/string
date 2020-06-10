@@ -160,7 +160,7 @@ class ReplaceBadWordsTest extends TestCase
 
         $string = 'douchebag douche bag';
         $this->assertSame(
-            "$r $r",
+            "{$r}bag $r bag",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

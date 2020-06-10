@@ -64,7 +64,7 @@ class RegularExpressionsOfBadWords
             '/dammit/i',
             '/damnit/i',
 
-            '/douche ?bag/i',
+            '/douche/i',
 
             '/d\W?(i|!)(c|k)k\b/i',
             '/d[\!\#\*]{2}k/i',
