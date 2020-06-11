@@ -236,6 +236,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'lesbian';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'Milford MILF';
         $this->assertSame(
             "Milford $r",

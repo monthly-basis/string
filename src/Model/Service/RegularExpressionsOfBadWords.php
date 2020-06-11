@@ -102,6 +102,7 @@ class RegularExpressionsOfBadWords
             '/jigaboo/i',
             '/jackass/i',
             '/kike/i',
+            '/lesbian/i',
             '/masturbat/i',
             '/\bmilf\b/i',
 
