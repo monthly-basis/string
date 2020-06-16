@@ -134,15 +134,15 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'bitch bi*ch bich bicth biitch Bi9ch b***h b**** biyach';
+        $string = 'bitch bi*ch bich bicth biitch Bi9ch a b***h a b**** biyach';
         $this->assertSame(
-            "$r $r $r $r $r $r $r $r $r",
+            "$r $r $r $r $r $r {$r}h $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'bit cheerful';
+        $string = 'bit cheerful a b*** a b**';
         $this->assertSame(
-            "bit cheerful",
+            "bit cheerful $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
