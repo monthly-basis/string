@@ -13,13 +13,25 @@ class Module
             'view_helpers' => [
                 'aliases' => [
                     'cleanUpSpaces'                      => StringHelper\CleanUpSpaces::class,
+
+                    /*
+                     * @deprecated Use ContentModerationHelper\ContainsBadWords
+                     */
                     'containsBadWords'                   => StringHelper\ContainsBadWords::class,
                     'escape'                             => StringHelper\Escape::class,
+
+                    /*
+                     * @deprecated Use ContentModerationHelper\EscapeAndReplaceBadWords
+                     */
                     'escapeAndReplaceBadWords'           => StringHelper\EscapeAndReplaceBadWords::class,
                     'getUrlFriendly'                     => StringHelper\UrlFriendly::class,
                     'shorten'                            => StringHelper\Shorten::class,
                     'stripTagsAndKeepFirstWords'         => StringHelper\StripTagsAndKeepFirstWords::class,
                     'stripTagsAndShorten'                => StringHelper\StripTagsAndShorten::class,
+
+                    /*
+                     * @deprecated Use ContentModerationHelper\StripTagsReplaceBadWordsAndShorten
+                     */
                     'stripTagsReplaceBadWordsAndShorten' => StringHelper\StripTagsReplaceBadWordsAndShorten::class,
                     'toHtml'                             => StringHelper\ToHtml::class,
                 ],
@@ -87,11 +99,20 @@ class Module
                 StringService\CleanUpSpaces::class => function ($sm) {
                     return new StringService\CleanUpSpaces();
                 },
+
+
+                /*
+                 * @deprecated Use ContentModerationService\ContainsBadWords
+                 */
                 StringService\ContainsBadWords::class => function ($sm) {
                     return new StringService\ContainsBadWords(
                         $sm->get(StringService\RegularExpressionsOfBadWords::class)
                     );
                 },
+
+                /*
+                 * @deprecated Use ContentModerationService\ContainsImmatureWords
+                 */
                 StringService\ContainsImmatureWords::class => function ($sm) {
                     return new StringService\ContainsImmatureWords(
                         $sm->get(StringService\RegularExpressionsOfImmatureWords::class)
@@ -117,14 +138,24 @@ class Module
                         $sm->get(StringService\NGrams::class)
                     );
                 },
+
+                /*
+                 * @deprecated Use ContentModerationService\RegularExpressionsOfBadWords
+                 */
                 StringService\RegularExpressionsOfBadWords::class => function ($sm) {
                     return new StringService\RegularExpressionsOfBadWords(
                     );
                 },
+                /*
+                 * @deprecated Use ContentModerationService\RegularExpressionsOfImmatureWords
+                 */
                 StringService\RegularExpressionsOfImmatureWords::class => function ($sm) {
                     return new StringService\RegularExpressionsOfImmatureWords(
                     );
                 },
+                /*
+                 * @deprecated Use ContentModerationService\ReplaceBadWords
+                 */
                 StringService\ReplaceBadWords::class => function ($sm) {
                     return new StringService\ReplaceBadWords(
                         $sm->get(StringService\RegularExpressionsOfBadWords::class)
@@ -144,6 +175,10 @@ class Module
                         $sm->get(StringService\Shorten::class)
                     );
                 },
+
+                /*
+                 * @deprecated Use ContentModerationService\ReplaceBadWordsAndShorten
+                 */
                 StringService\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
                     return new StringService\StripTagsReplaceBadWordsAndShorten(
                         $sm->get(StringService\ReplaceBadWords::class),
