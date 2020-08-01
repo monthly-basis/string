@@ -13,27 +13,11 @@ class Module
             'view_helpers' => [
                 'aliases' => [
                     'cleanUpSpaces'                      => StringHelper\CleanUpSpaces::class,
-
-                    /*
-                     * @deprecated Use ContentModerationHelper\ContainsBadWords
-                     */
-                    'containsBadWords'                   => StringHelper\ContainsBadWords::class,
                     'escape'                             => StringHelper\Escape::class,
-
-                    /*
-                     * @deprecated Use ContentModerationHelper\EscapeAndReplaceBadWords
-                     */
-                    'escapeAndReplaceBadWords'           => StringHelper\EscapeAndReplaceBadWords::class,
                     'getUrlFriendly'                     => StringHelper\UrlFriendly::class,
                     'shorten'                            => StringHelper\Shorten::class,
                     'stripTagsAndKeepFirstWords'         => StringHelper\StripTagsAndKeepFirstWords::class,
                     'stripTagsAndShorten'                => StringHelper\StripTagsAndShorten::class,
-
-                    /*
-                     * @deprecated Use ContentModerationHelper\StripTagsReplaceBadWordsAndShorten
-                     */
-                    'stripTagsReplaceBadWordsAndShorten' => StringHelper\StripTagsReplaceBadWordsAndShorten::class,
-                    'toHtml'                             => StringHelper\ToHtml::class,
                 ],
                 'factories' => [
                     StringHelper\CleanUpSpaces::class => function ($sm) {
@@ -41,20 +25,9 @@ class Module
                             $sm->get(StringService\CleanUpSpaces::class)
                         );
                     },
-                    StringHelper\ContainsBadWords::class => function ($sm) {
-                        return new StringHelper\ContainsBadWords(
-                            $sm->get(StringService\ContainsBadWords::class)
-                        );
-                    },
                     StringHelper\Escape::class => function ($sm) {
                         return new StringHelper\Escape(
                             $sm->get(StringService\Escape::class)
-                        );
-                    },
-                    StringHelper\EscapeAndReplaceBadWords::class => function ($sm) {
-                        return new StringHelper\EscapeAndReplaceBadWords(
-                            $sm->get(StringService\Escape::class),
-                            $sm->get(StringService\ReplaceBadWords::class)
                         );
                     },
                     StringHelper\Shorten::class => function ($sm) {
@@ -70,16 +43,6 @@ class Module
                     StringHelper\StripTagsAndShorten::class => function ($sm) {
                         return new StringHelper\StripTagsAndShorten(
                             $sm->get(StringService\StripTagsAndShorten::class)
-                        );
-                    },
-                    StringHelper\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
-                        return new StringHelper\StripTagsReplaceBadWordsAndShorten(
-                            $sm->get(StringService\StripTagsReplaceBadWordsAndShorten::class)
-                        );
-                    },
-                    StringHelper\ToHtml::class => function ($sm) {
-                        return new StringHelper\ToHtml(
-                            $sm->get(StringService\ToHtml::class)
                         );
                     },
                     StringHelper\UrlFriendly::class => function ($sm) {
@@ -98,25 +61,6 @@ class Module
             'factories' => [
                 StringService\CleanUpSpaces::class => function ($sm) {
                     return new StringService\CleanUpSpaces();
-                },
-
-
-                /*
-                 * @deprecated Use ContentModerationService\ContainsBadWords
-                 */
-                StringService\ContainsBadWords::class => function ($sm) {
-                    return new StringService\ContainsBadWords(
-                        $sm->get(StringService\RegularExpressionsOfBadWords::class)
-                    );
-                },
-
-                /*
-                 * @deprecated Use ContentModerationService\ContainsImmatureWords
-                 */
-                StringService\ContainsImmatureWords::class => function ($sm) {
-                    return new StringService\ContainsImmatureWords(
-                        $sm->get(StringService\RegularExpressionsOfImmatureWords::class)
-                    );
                 },
                 StringService\Contains\CaseInsensitive::class => function ($sm) {
                     return new StringService\Contains\CaseInsensitive();
@@ -138,29 +82,6 @@ class Module
                         $sm->get(StringService\NGrams::class)
                     );
                 },
-
-                /*
-                 * @deprecated Use ContentModerationService\RegularExpressionsOfBadWords
-                 */
-                StringService\RegularExpressionsOfBadWords::class => function ($sm) {
-                    return new StringService\RegularExpressionsOfBadWords(
-                    );
-                },
-                /*
-                 * @deprecated Use ContentModerationService\RegularExpressionsOfImmatureWords
-                 */
-                StringService\RegularExpressionsOfImmatureWords::class => function ($sm) {
-                    return new StringService\RegularExpressionsOfImmatureWords(
-                    );
-                },
-                /*
-                 * @deprecated Use ContentModerationService\ReplaceBadWords
-                 */
-                StringService\ReplaceBadWords::class => function ($sm) {
-                    return new StringService\ReplaceBadWords(
-                        $sm->get(StringService\RegularExpressionsOfBadWords::class)
-                    );
-                },
                 StringService\Shorten::class => function ($sm) {
                     return new StringService\Shorten();
                 },
@@ -173,22 +94,6 @@ class Module
                 StringService\StripTagsAndShorten::class => function ($sm) {
                     return new StringService\StripTagsAndShorten(
                         $sm->get(StringService\Shorten::class)
-                    );
-                },
-
-                /*
-                 * @deprecated Use ContentModerationService\ReplaceBadWordsAndShorten
-                 */
-                StringService\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
-                    return new StringService\StripTagsReplaceBadWordsAndShorten(
-                        $sm->get(StringService\ReplaceBadWords::class),
-                        $sm->get(StringService\Shorten::class)
-                    );
-                },
-                StringService\ToHtml::class => function ($sm) {
-                    return new StringService\ToHtml(
-                        $sm->get(StringService\Escape::class),
-                        $sm->get(StringService\ReplaceBadWords::class)
                     );
                 },
                 StringService\UrlFriendly::class => function ($sm) {
