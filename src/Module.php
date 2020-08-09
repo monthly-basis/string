@@ -96,6 +96,11 @@ class Module
                         $sm->get(StringService\Shorten::class)
                     );
                 },
+                StringService\Url\ToHtml::class => function ($sm) {
+                    return new StringService\Url\ToHtml(
+                        $sm->get(StringService\Escape::class)
+                    );
+                },
                 StringService\UrlFriendly::class => function ($sm) {
                     return new StringService\UrlFriendly();
                 },
