@@ -25,6 +25,13 @@ class ToHtml
             return "<a href=\"$urlEscaped\">$urlEscaped</a>";
         }
 
+        if (($parseUrlArray['host'] == 'www.google.com')
+            && ($parseUrlArray['path'] == '/search')
+        ) {
+            parse_str($parseUrlArray['query'], $queryStringArray);
+            $urlEscaped = 'https://www.google.com/search?q=' . urlencode($queryStringArray['q']);
+        }
+
         return "<a href=\"$urlEscaped\" target=\"_blank\" rel=\"nofollow external noopener\">$urlEscaped</a>";
     }
 }
