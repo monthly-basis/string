@@ -13,6 +13,8 @@ class ToHtml
 
     public function toHtml(string $url): string
     {
+        $url = html_entity_decode($url);
+
         $localDomains = [
             'jiskha.com',
             'www.jiskha.com',
