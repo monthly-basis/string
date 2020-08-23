@@ -11,14 +11,6 @@ class EscapeTest extends TestCase
         $this->escapeService = new StringService\Escape();
     }
 
-    public function testInitialize()
-    {
-        $this->assertInstanceOf(
-            StringService\Escape::class,
-            $this->escapeService
-        );
-    }
-
     public function testEscape()
     {
         $this->assertSame(
