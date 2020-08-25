@@ -7,8 +7,8 @@ class RepeatingCharacters
 {
     public function containsRepeatingCharacters(string $string): bool
     {
-        // Match one character 4 or more times.
-        $pattern = '/(.)\1{3,}/';
+        // Match 1 character at least 5 times.
+        $pattern = '/(.)\1{4,}/';
         if (preg_match($pattern, $string)) {
             return true;
         }

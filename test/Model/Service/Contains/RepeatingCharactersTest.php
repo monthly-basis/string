@@ -13,16 +13,12 @@ class RepeatingCharactersTest extends TestCase
 
     public function testContainsRepeatingCharacters()
     {
+        // 1 character
         $this->assertFalse(
-            $this->containsRepeatingCharactersService->containsRepeatingCharacters('abbccc')
-        );
-
-        $this->assertFalse(
-            $this->containsRepeatingCharactersService->containsRepeatingCharacters('abbcccddd')
-        );
-
-        $this->assertTrue(
             $this->containsRepeatingCharactersService->containsRepeatingCharacters('abbccccddd')
+        );
+        $this->assertTrue(
+            $this->containsRepeatingCharactersService->containsRepeatingCharacters('abbcccccddd')
         );
     }
 }
