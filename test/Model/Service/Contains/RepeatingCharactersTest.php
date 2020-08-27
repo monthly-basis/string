@@ -8,7 +8,11 @@ class RepeatingCharactersTest extends TestCase
 {
     protected function setUp(): void
     {
-        $this->containsRepeatingCharactersService = new StringService\Contains\RepeatingCharacters();
+        $config = require_once($_SERVER['PWD'] . '/config/autoload/local.php');
+
+        $this->containsRepeatingCharactersService = new StringService\Contains\RepeatingCharacters(
+            $config['string']['contains-repeating-characters']
+        );
     }
 
     public function testContainsRepeatingCharacters()
