@@ -65,11 +65,6 @@ class Module
                 StringService\Contains\CaseInsensitive::class => function ($sm) {
                     return new StringService\Contains\CaseInsensitive();
                 },
-                StringService\Contains\RepeatingCharacters::class => function ($sm) {
-                    return new StringService\Contains\RepeatingCharacters(
-                        $sm->get('config')['string']['contains-repeating-characters']
-                    );
-                },
                 StringService\EndsWith::class => function ($sm) {
                     return new StringService\EndsWith();
                 },
