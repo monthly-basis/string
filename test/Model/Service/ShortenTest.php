@@ -47,11 +47,33 @@ class ShortenTest extends TestCase
 
 $string = <<<STRING
 Welcome to the string with
-awesome linebreaks. Isn't this
+awesome linebreaks. This is
 just fantastic.
 STRING;
         $this->assertSame(
-            'Welcome to the string with awesome linebreaks. Isn\'t this just',
+            'Welcome to the string with awesome linebreaks. This is just',
+            $this->shortenService->shorten(
+                $string,
+                64
+            )
+        );
+    }
+
+    /**
+     * @todo Update shorten function so that it can handle:
+     * - invalid UTF-8 characters
+     * - invalid UTF-8 sequences / codepoints
+     *
+     * The string below contains an invalid UTF-8 codepoint, and therefore
+     * shorten() returns an empty string, and the unit test fails.
+     *
+     * @see https://www.php.net/manual/en/reference.pcre.pattern.modifiers.php
+     */
+    public function test_shorten_invalidUtf8()
+    {
+        $string = urldecode('The+colony+Lord+Baltimore+established+in+Maryland+encouraged+Land+grants+for+every+settler+A+role+for+colonists+in+government+Religious+freedom+for+Roman+Catholic+%95%95+The+settlement+of+wealthy+people');
+        $this->assertSame(
+            'The colony Lord Baltimore established in Maryland encouraged Land',
             $this->shortenService->shorten(
                 $string,
                 64
