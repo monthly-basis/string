@@ -11,15 +11,7 @@ class ShortenTest extends TestCase
         $this->shortenService = new StringService\Shorten();
     }
 
-    public function testInitialize()
-    {
-        $this->assertInstanceOf(
-            StringService\Shorten::class,
-            $this->shortenService
-        );
-    }
-
-    public function testGetUrls()
+    public function test_shorten()
     {
         $string = 'hello world';
         $this->assertSame(
