@@ -7,6 +7,8 @@ class Shorten
         string $string,
         int $maxLength
     ): string {
+        $string = mb_convert_encoding($string, 'UTF-8');
+
         $string = preg_replace('/\s+/su', ' ', $string);
         $string = trim($string);
 
