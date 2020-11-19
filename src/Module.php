@@ -12,11 +12,11 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
-                    'escape'                             => StringHelper\Escape::class,
-                    'getUrlFriendly'                     => StringHelper\UrlFriendly::class,
-                    'shorten'                            => StringHelper\Shorten::class,
-                    'stripTagsAndKeepFirstWords'         => StringHelper\StripTagsAndKeepFirstWords::class,
-                    'stripTagsAndShorten'                => StringHelper\StripTagsAndShorten::class,
+                    'escape'                     => StringHelper\Escape::class,
+                    'getUrlFriendly'             => StringHelper\UrlFriendly::class,
+                    'shorten'                    => StringHelper\Shorten::class,
+                    'stripTagsAndKeepFirstWords' => StringHelper\StripTagsAndKeepFirstWords::class,
+                    'stripTagsAndShorten'        => StringHelper\StripTagsAndShorten::class,
                 ],
                 'factories' => [
                     StringHelper\Escape::class => function ($sm) {
