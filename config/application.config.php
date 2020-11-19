@@ -2,7 +2,7 @@
 
 return [
     'modules' => [
-        'LeoGalleguillos\String',
+        'MonthlyBasis\String',
         'Zend\Router',
     ],
     // These are various options for the listeners attached to the ModuleManager

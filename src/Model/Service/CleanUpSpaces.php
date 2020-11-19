@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\String\Model\Service;
+namespace MonthlyBasis\String\Model\Service;
 
 /**
  * @deprecated Use MonthlyBasis\ContentModeration\Model\Service\Replace\Spaces() instead.

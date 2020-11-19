@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\String\View\Helper;
+namespace MonthlyBasis\String\View\Helper;
 
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 use Zend\View\Helper\AbstractHelper;
 
 class Escape extends AbstractHelper

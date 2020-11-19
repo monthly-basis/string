@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\String\Model\Entity\NGram;
+namespace MonthlyBasis\String\Model\Entity\NGram;
 
-use LeoGalleguillos\String\Model\Entity as StringEntity;
+use MonthlyBasis\String\Model\Entity as StringEntity;
 
 class TwoGram
 {

@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\String\Model\Service\Url;
+namespace MonthlyBasis\String\Model\Service\Url;
 
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 
 class ToHtml
 {

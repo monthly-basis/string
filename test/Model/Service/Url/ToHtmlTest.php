@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\StringTest\Model\Service\Url;
+namespace MonthlyBasis\StringTest\Model\Service\Url;
 
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 use PHPUnit\Framework\TestCase;
 
 class ToHtmlTest extends TestCase

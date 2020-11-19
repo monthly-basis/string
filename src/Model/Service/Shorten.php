@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\String\Model\Service;
+namespace MonthlyBasis\String\Model\Service;
 
 class Shorten
 {

@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\StringTest\View\Helper;
+namespace MonthlyBasis\StringTest\View\Helper;
 
-use LeoGalleguillos\String\Model\Service as StringService;
-use LeoGalleguillos\String\View\Helper as StringHelper;
+use MonthlyBasis\String\Model\Service as StringService;
+use MonthlyBasis\String\View\Helper as StringHelper;
 use PHPUnit\Framework\TestCase;
 
 class EscapeTest extends TestCase

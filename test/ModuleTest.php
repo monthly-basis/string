@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\StringTest;
+namespace MonthlyBasis\StringTest;
 
-use LeoGalleguillos\String\Module;
+use MonthlyBasis\String\Module;
 use PHPUnit\Framework\TestCase;
 use Zend\Mvc\Application;
 

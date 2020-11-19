@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\String\Model\Service\NGrams;
+namespace MonthlyBasis\String\Model\Service\NGrams;
 
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 
 class SortedByCount
 {

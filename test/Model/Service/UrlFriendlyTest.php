@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\StringTest\Model\Service;
+namespace MonthlyBasis\StringTest\Model\Service;
 
-use LeoGalleguillos\String\Model\Service\UrlFriendly as UrlFriendly;
+use MonthlyBasis\String\Model\Service\UrlFriendly as UrlFriendly;
 use PHPUnit\Framework\TestCase;
 
 class UrlFriendlyTest extends TestCase

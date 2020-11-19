@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\StringTest\Model\Service;
+namespace MonthlyBasis\StringTest\Model\Service;
 
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 use PHPUnit\Framework\TestCase;
 
 class StripTagsAndShortenTest extends TestCase

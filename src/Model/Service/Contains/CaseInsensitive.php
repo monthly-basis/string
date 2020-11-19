@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\String\Model\Service\Contains;
+namespace MonthlyBasis\String\Model\Service\Contains;
 
 class CaseInsensitive
 {

@@ -1,9 +1,9 @@
 <?php
-namespace LeoGalleguillos\String;
+namespace MonthlyBasis\String;
 
-use LeoGalleguillos\String\View\Helper as StringHelper;
-use LeoGalleguillos\String\Model\Factory\View\Helper\Escape as EscapeHelperFactory;
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\View\Helper as StringHelper;
+use MonthlyBasis\String\Model\Factory\View\Helper\Escape as EscapeHelperFactory;
+use MonthlyBasis\String\Model\Service as StringService;
 
 class Module
 {
