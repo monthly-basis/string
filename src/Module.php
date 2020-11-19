@@ -12,7 +12,6 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
-                    'cleanUpSpaces'                      => StringHelper\CleanUpSpaces::class,
                     'escape'                             => StringHelper\Escape::class,
                     'getUrlFriendly'                     => StringHelper\UrlFriendly::class,
                     'shorten'                            => StringHelper\Shorten::class,
@@ -20,11 +19,6 @@ class Module
                     'stripTagsAndShorten'                => StringHelper\StripTagsAndShorten::class,
                 ],
                 'factories' => [
-                    StringHelper\CleanUpSpaces::class => function ($sm) {
-                        return new StringHelper\CleanUpSpaces(
-                            $sm->get(StringService\CleanUpSpaces::class)
-                        );
-                    },
                     StringHelper\Escape::class => function ($sm) {
                         return new StringHelper\Escape(
                             $sm->get(StringService\Escape::class)
