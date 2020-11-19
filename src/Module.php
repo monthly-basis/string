@@ -59,12 +59,6 @@ class Module
     {
         return [
             'factories' => [
-                /**
-                 * @deprecated Use MonthlyBasis\ContentModeration\Model\Service\Replace\Spaces() instead.
-                 */
-                StringService\CleanUpSpaces::class => function ($sm) {
-                    return new StringService\CleanUpSpaces();
-                },
                 StringService\Contains\CaseInsensitive::class => function ($sm) {
                     return new StringService\Contains\CaseInsensitive();
                 },
