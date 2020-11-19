@@ -1,9 +1,8 @@
 <?php
 namespace MonthlyBasis\String;
 
-use MonthlyBasis\String\View\Helper as StringHelper;
-use MonthlyBasis\String\Model\Factory\View\Helper\Escape as EscapeHelperFactory;
 use MonthlyBasis\String\Model\Service as StringService;
+use MonthlyBasis\String\View\Helper as StringHelper;
 
 class Module
 {
