@@ -96,7 +96,11 @@ class Module
                     );
                 },
                 StringService\UrlFriendly::class => function ($sm) {
-                    return new StringService\UrlFriendly();
+                    $configEntity = $sm->get(StringFactory\Config\UrlFriendly::class)
+                        ->buildFromArray($sm->get('Config')['url_friendly']);
+                    return new StringService\UrlFriendly(
+                        $configEntity
+                    );
                 },
                 StringService\Urls::class => function ($sm) {
                     return new StringService\Urls(
