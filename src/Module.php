@@ -1,6 +1,7 @@
 <?php
 namespace MonthlyBasis\String;
 
+use MonthlyBasis\String\Model\Factory as StringFactory;
 use MonthlyBasis\String\Model\Service as StringService;
 use MonthlyBasis\String\View\Helper as StringHelper;
 
@@ -52,6 +53,9 @@ class Module
     {
         return [
             'factories' => [
+                StringFactory\Config\UrlFriendly::class => function ($sm) {
+                    return new StringFactory\Config\UrlFriendly();
+                },
                 StringService\Contains\CaseInsensitive::class => function ($sm) {
                     return new StringService\Contains\CaseInsensitive();
                 },
