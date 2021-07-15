@@ -12,13 +12,7 @@ class Escape extends AbstractHelper
         $this->escapeService = $escapeService;
     }
 
-    /**
-     * Invoke.
-     *
-     * @param string $string
-     * @return string
-     */
-    public function __invoke(string $string) : string
+    public function __invoke(string $string = null): string
     {
         return $this->escapeService->escape($string);
     }

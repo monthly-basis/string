@@ -15,14 +15,6 @@ class EscapeTest extends TestCase
         );
     }
 
-    public function testInitialize()
-    {
-        $this->assertInstanceOf(
-            StringHelper\Escape::class,
-            $this->escapeHelper
-        );
-    }
-
     public function testInvoke()
     {
         $this->assertSame(
@@ -40,6 +32,11 @@ class EscapeTest extends TestCase
         $this->assertSame(
             '&quot;&gt;attempt injection after attribute',
             $this->escapeHelper->__invoke($string)
+        );
+
+        $this->assertSame(
+            '',
+            $this->escapeHelper->__invoke(null)
         );
     }
 }
