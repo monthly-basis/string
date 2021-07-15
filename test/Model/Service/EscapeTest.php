@@ -11,7 +11,7 @@ class EscapeTest extends TestCase
         $this->escapeService = new StringService\Escape();
     }
 
-    public function testEscape()
+    public function test_escape()
     {
         $this->assertSame(
             'test',
@@ -28,6 +28,11 @@ class EscapeTest extends TestCase
         $this->assertSame(
             '&quot;&gt;attempt injection after attribute',
             $this->escapeService->escape($string)
+        );
+
+        $this->assertSame(
+            '',
+            $this->escapeService->escape(null)
         );
     }
 }
