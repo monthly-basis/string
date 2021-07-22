@@ -16,6 +16,21 @@ class ToHtmlTest extends TestCase
         );
     }
 
+    public function test_toHtml_invalidUrl_unmodifiedString()
+    {
+        $url = 'https://@';
+
+        $this->escapeServiceMock
+            ->expects($this->exactly(0))
+            ->method('escape')
+            ;
+
+        $this->assertSame(
+            $url,
+            $this->toHtmlService->toHtml($url)
+        );
+    }
+
     public function test_toHtml_localDomain_plainAHref()
     {
         $url = 'https://www.jiskha.com';

@@ -21,7 +21,11 @@ class ToHtml
         ];
 
         $parseUrlArray = parse_url($url);
-        $urlEscaped    = $this->escapeService->escape($url);
+        if (empty($parseUrlArray)) {
+            return $url;
+        }
+
+        $urlEscaped = $this->escapeService->escape($url);
 
         if (in_array($parseUrlArray['host'], $localDomains)) {
             return "<a href=\"$urlEscaped\">$urlEscaped</a>";
