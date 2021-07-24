@@ -76,6 +76,9 @@ class Module
                         $sm->get(StringService\NGrams::class)
                     );
                 },
+                StringService\Random::class => function ($sm) {
+                    return new StringService\Random();
+                },
                 StringService\Shorten::class => function ($sm) {
                     return new StringService\Shorten();
                 },
