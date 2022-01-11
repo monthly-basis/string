@@ -35,6 +35,11 @@ class EscapeTest extends TestCase
         );
 
         $this->assertSame(
+            '2020',
+            $this->escapeHelper->__invoke(2020)
+        );
+
+        $this->assertSame(
             '',
             $this->escapeHelper->__invoke(null)
         );
