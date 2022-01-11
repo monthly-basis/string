@@ -29,7 +29,18 @@ class EscapeTest extends TestCase
             '&quot;&gt;attempt injection after attribute',
             $this->escapeService->escape($string)
         );
+    }
 
+    public function test_escape_int_string()
+    {
+        $this->assertSame(
+            '2020',
+            $this->escapeService->escape(2020)
+        );
+    }
+
+    public function test_escape_null_string()
+    {
         $this->assertSame(
             '',
             $this->escapeService->escape(null)
