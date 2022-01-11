@@ -3,7 +3,7 @@ namespace MonthlyBasis\StringTest;
 
 use MonthlyBasis\String\Module;
 use PHPUnit\Framework\TestCase;
-use Zend\Mvc\Application;
+use Laminas\Mvc\Application;
 
 class ModuleTest extends TestCase
 {

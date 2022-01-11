@@ -2,7 +2,7 @@
 namespace MonthlyBasis\String\View\Helper;
 
 use MonthlyBasis\String\Model\Service as StringService;
-use Zend\View\Helper\AbstractHelper;
+use Laminas\View\Helper\AbstractHelper;
 
 class StripTagsAndKeepFirstWords extends AbstractHelper
 {
