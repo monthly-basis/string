@@ -1,8 +1,11 @@
 <?php
+declare(strict_types=1);
+
 namespace MonthlyBasis\StringTest\Model\Service;
 
 use MonthlyBasis\String\Model\Service as StringService;
 use PHPUnit\Framework\TestCase;
+use TypeError;
 
 class EscapeTest extends TestCase
 {
@@ -33,10 +36,15 @@ class EscapeTest extends TestCase
 
     public function test_escape_int_string()
     {
-        $this->assertSame(
-            '2020',
-            $this->escapeService->escape(2020)
-        );
+        try {
+            $this->escapeService->escape(2020);
+            $this->fail();
+        } catch (TypeError $typeError) {
+            $this->assertSame(
+                'Argument 1 passed to',
+                substr($typeError->getMessage(), 0, 20),
+            );
+        }
     }
 
     public function test_escape_null_string()

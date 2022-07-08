@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace MonthlyBasis\String\View\Helper;
 
 use MonthlyBasis\String\Model\Service as StringService;

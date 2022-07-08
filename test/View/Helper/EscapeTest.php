@@ -1,9 +1,12 @@
 <?php
+declare(strict_types=1);
+
 namespace MonthlyBasis\StringTest\View\Helper;
 
 use MonthlyBasis\String\Model\Service as StringService;
 use MonthlyBasis\String\View\Helper as StringHelper;
 use PHPUnit\Framework\TestCase;
+use TypeError;
 
 class EscapeTest extends TestCase
 {
@@ -15,7 +18,7 @@ class EscapeTest extends TestCase
         );
     }
 
-    public function testInvoke()
+    public function test___invoke()
     {
         $this->assertSame(
             'test',
@@ -34,10 +37,15 @@ class EscapeTest extends TestCase
             $this->escapeHelper->__invoke($string)
         );
 
-        $this->assertSame(
-            '2020',
-            $this->escapeHelper->__invoke(2020)
-        );
+        try {
+            $this->escapeHelper->__invoke(2020);
+            $this->fail();
+        } catch (TypeError $typeError) {
+            $this->assertSame(
+                'Argument 1 passed to',
+                substr($typeError->getMessage(), 0, 20),
+            );
+        }
 
         $this->assertSame(
             '',
