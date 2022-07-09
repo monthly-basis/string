@@ -15,6 +15,7 @@ class Module
                     'escape'                     => StringHelper\Escape::class,
                     'getUrlFriendly'             => StringHelper\UrlFriendly::class,
                     'shorten'                    => StringHelper\Shorten::class,
+                    'startsWith'                 => StringHelper\StartsWith::class,
                     'stripTagsAndKeepFirstWords' => StringHelper\StripTagsAndKeepFirstWords::class,
                     'stripTagsAndShorten'        => StringHelper\StripTagsAndShorten::class,
                 ],
@@ -27,6 +28,11 @@ class Module
                     StringHelper\Shorten::class => function ($sm) {
                         return new StringHelper\Shorten(
                             $sm->get(StringService\Shorten::class)
+                        );
+                    },
+                    StringHelper\StartsWith::class => function ($sm) {
+                        return new StringHelper\StartsWith(
+                            $sm->get(StringService\StartsWith::class)
                         );
                     },
                     StringHelper\StripTagsAndKeepFirstWords::class => function ($sm) {
