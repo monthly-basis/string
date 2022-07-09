@@ -54,7 +54,7 @@ class ToHtmlTest extends TestCase
             ->with($url)
             ->willReturn($url);
         $this->assertSame(
-            '<a href="https://www.yahoo.com" target="_blank" rel="nofollow external noopener">https://www.yahoo.com</a>',
+            '<a href="https://www.yahoo.com" target="_blank" rel="ugc noopener">https://www.yahoo.com</a>',
             $this->toHtmlService->toHtml($url)
         );
     }
@@ -68,7 +68,7 @@ class ToHtmlTest extends TestCase
             ->with($url)
             ->willReturn($url);
         $this->assertSame(
-            '<a href="https://www.google.com/search?q=how+to+write+a+good+thesis+sentence" target="_blank" rel="nofollow external noopener">https://www.google.com/search?q=how+to+write+a+good+thesis+sentence</a>',
+            '<a href="https://www.google.com/search?q=how+to+write+a+good+thesis+sentence" target="_blank" rel="ugc noopener">https://www.google.com/search?q=how+to+write+a+good+thesis+sentence</a>',
             $this->toHtmlService->toHtml($url)
         );
     }
@@ -82,7 +82,7 @@ class ToHtmlTest extends TestCase
             ->with($url)
             ->willReturn($url);
         $this->assertSame(
-            '<a href="https://www.google.com/search?q=outcome+of+the+1914+Battle+of+Tannenberg" target="_blank" rel="nofollow external noopener">https://www.google.com/search?q=outcome+of+the+1914+Battle+of+Tannenberg</a>',
+            '<a href="https://www.google.com/search?q=outcome+of+the+1914+Battle+of+Tannenberg" target="_blank" rel="ugc noopener">https://www.google.com/search?q=outcome+of+the+1914+Battle+of+Tannenberg</a>',
             $this->toHtmlService->toHtml($url)
         );
     }
