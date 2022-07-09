@@ -41,6 +41,6 @@ class ToHtml
             }
         }
 
-        return "<a href=\"$urlEscaped\" target=\"_blank\" rel=\"ugc noopener\">$urlEscaped</a>";
+        return "<a href=\"$urlEscaped\" rel=\"noopener ugc\">$urlEscaped</a>";
     }
 }
