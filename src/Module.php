@@ -85,6 +85,9 @@ class Module
                 StringService\Random::class => function ($sm) {
                     return new StringService\Random();
                 },
+                StringService\Sentences::class => function ($sm) {
+                    return new StringService\Sentences();
+                },
                 StringService\Shorten::class => function ($sm) {
                     return new StringService\Shorten();
                 },
