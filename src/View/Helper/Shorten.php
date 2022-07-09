@@ -1,8 +1,8 @@
 <?php
 namespace MonthlyBasis\String\View\Helper;
 
-use MonthlyBasis\String\Model\Service as StringService;
 use Laminas\View\Helper\AbstractHelper;
+use MonthlyBasis\String\Model\Service as StringService;
 
 class Shorten extends AbstractHelper
 {
@@ -15,7 +15,7 @@ class Shorten extends AbstractHelper
     public function __invoke(
         string $string,
         int $maxLength
-    ) : string {
+    ): string {
         return $this->shortenService->shorten(
             $string,
             $maxLength
