@@ -15,16 +15,20 @@ class First
 
     public function getFirstSentences(
         string $string,
-        int $maxLength = 125
+        int $minLength = 10,
+        int $maxLength = 100
     ): string {
         /*
          * If string is shortened to max length, then last sentence can get
          * shortened and inadvertently added to first sentences.
          *
-         * Therefore, shorten to max length plus 10 so that last sentence is not
+         * Therefore, shorten to max length plus 50 so that last sentence is not
          * appended if it is too long.
+         *
+         * Also, if first sentence is longer than max length, then try to finish
+         * the sentence by looking for end of sentence within 50 next characters.
          */
-        $stringShortened = $this->shortenService->shorten($string, $maxLength + 10);
+        $stringShortened = $this->shortenService->shorten($string, $maxLength + 50);
 
         $sentences = $this->sentencesService->getSentences($stringShortened);
 
@@ -41,6 +45,10 @@ class First
 
         $firstSentences = '';
         foreach ($sentences as $sentence) {
+            if (strlen($firstSentences) < $minLength) {
+                $firstSentences .= $sentence . ' ';
+                continue;
+            }
             if (strlen($firstSentences . $sentence) > $maxLength) {
                 break;
             }

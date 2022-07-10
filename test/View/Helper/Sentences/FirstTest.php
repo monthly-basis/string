@@ -23,13 +23,13 @@ class FirstTest extends TestCase
         $this->firstServiceMock
             ->expects($this->once())
             ->method('getFirstSentences')
-            ->with('First sentence. Second sentence. Third sentence.', 35)
+            ->with('First sentence. Second sentence. Third sentence.', 5, 50)
             ->willReturn('First sentence. Second sentence.')
             ;
 
         $this->assertSame(
             'First sentence. Second sentence.',
-            $this->firstHelper->__invoke('First sentence. Second sentence. Third sentence.', 35)
+            $this->firstHelper->__invoke('First sentence. Second sentence. Third sentence.', 5, 50)
         );
     }
 }

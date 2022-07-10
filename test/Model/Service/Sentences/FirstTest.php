@@ -38,7 +38,7 @@ class FirstTest extends TestCase
 
         $this->assertSame(
             'First sentence. Second sentence.',
-            $this->firstService->getFirstSentences('string', 35)
+            $this->firstService->getFirstSentences('string', 10, 35)
         );
     }
 
@@ -59,7 +59,7 @@ class FirstTest extends TestCase
 
         $this->assertSame(
             'First sentence. Second sentence.',
-            $this->firstService->getFirstSentences('string', 32)
+            $this->firstService->getFirstSentences('string', 10, 32)
         );
     }
 
@@ -80,7 +80,11 @@ class FirstTest extends TestCase
 
         $this->assertSame(
             'First sentence.',
-            $this->firstService->getFirstSentences('First sentence. Second sentence is too long.', 32)
+            $this->firstService->getFirstSentences(
+                'First sentence. Second sentence is too long.',
+                10,
+                32
+            )
         );
     }
 
