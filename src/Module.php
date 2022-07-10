@@ -88,6 +88,12 @@ class Module
                 StringService\Sentences::class => function ($sm) {
                     return new StringService\Sentences();
                 },
+                StringService\Sentences\First::class => function ($sm) {
+                    return new StringService\Sentences\First(
+                        $sm->get(StringService\Sentences::class),
+                        $sm->get(StringService\Shorten::class),
+                    );
+                },
                 StringService\Shorten::class => function ($sm) {
                     return new StringService\Shorten();
                 },
