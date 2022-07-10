@@ -20,6 +20,6 @@ class First
 
         $sentences = $this->sentencesService->getSentences($stringShortened);
 
-        return $sentences[0];
+        return $sentences[0] ?? '';
     }
 }

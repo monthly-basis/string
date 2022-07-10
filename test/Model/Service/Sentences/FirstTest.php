@@ -21,7 +21,7 @@ class FirstTest extends TestCase
         );
     }
 
-    public function test_getFirstSentence()
+    public function test_getFirstSentence_sentences_firstSentence()
     {
         $this->shortenServiceMock
             ->expects($this->once())
@@ -39,6 +39,27 @@ class FirstTest extends TestCase
         $this->assertSame(
             'first sentence',
             $this->firstService->getFirstSentence('string')
+        );
+    }
+
+    public function test_getFirstSentence_emptyArray_emptyString()
+    {
+        $this->shortenServiceMock
+            ->expects($this->once())
+            ->method('shorten')
+            ->with('')
+            ->willReturn('')
+            ;
+        $this->sentencesServiceMock
+            ->expects($this->once())
+            ->method('getSentences')
+            ->with('')
+            ->willReturn([])
+            ;
+
+        $this->assertSame(
+            '',
+            $this->firstService->getFirstSentence('')
         );
     }
 }
