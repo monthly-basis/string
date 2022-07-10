@@ -105,5 +105,11 @@ class SentencesTest extends TestCase
             ],
             $this->sentencesService->getSentences($string),
         );
+
+        $string = '';
+        $this->assertSame(
+            [],
+            $this->sentencesService->getSentences($string),
+        );
     }
 }
