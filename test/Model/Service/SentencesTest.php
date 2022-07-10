@@ -89,5 +89,21 @@ class SentencesTest extends TestCase
             ],
             $this->sentencesService->getSentences($string),
         );
+
+        $string = 'Sentence with no punctuation';
+        $this->assertSame(
+            [
+                'Sentence with no punctuation',
+            ],
+            $this->sentencesService->getSentences($string),
+        );
+
+        $string = "Sentence\nwith\rline breaks.";
+        $this->assertSame(
+            [
+                $string,
+            ],
+            $this->sentencesService->getSentences($string),
+        );
     }
 }
