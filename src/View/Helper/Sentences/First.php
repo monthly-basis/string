@@ -13,10 +13,12 @@ class First extends AbstractHelper
     }
 
     public function __invoke(
-        string $string
+        string $string,
+        int $maxLength = 125
     ): string {
-        return $this->firstService->getFirstSentence(
-            $string
+        return $this->firstService->getFirstSentences(
+            $string,
+            $maxLength
         );
     }
 }
