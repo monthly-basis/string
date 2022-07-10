@@ -13,6 +13,7 @@ class Module
             'view_helpers' => [
                 'aliases' => [
                     'escape'                     => StringHelper\Escape::class,
+                    'getFirstSentence'           => StringHelper\Sentences\First::class,
                     'getUrlFriendly'             => StringHelper\UrlFriendly::class,
                     'shorten'                    => StringHelper\Shorten::class,
                     'startsWith'                 => StringHelper\StartsWith::class,
@@ -23,6 +24,11 @@ class Module
                     StringHelper\Escape::class => function ($sm) {
                         return new StringHelper\Escape(
                             $sm->get(StringService\Escape::class)
+                        );
+                    },
+                    StringHelper\Sentences\First::class => function ($sm) {
+                        return new StringHelper\Sentences\First(
+                            $sm->get(StringService\Sentences\First::class)
                         );
                     },
                     StringHelper\Shorten::class => function ($sm) {
