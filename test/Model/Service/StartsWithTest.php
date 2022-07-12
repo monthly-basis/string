@@ -27,6 +27,20 @@ class StartsWithTest extends TestCase
             )
         );
 
+        $this->assertTrue(
+            $this->startsWithService->startsWith(
+                'haystack and need are the same',
+                'haystack and need are the same',
+            )
+        );
+
+        $this->assertFalse(
+            $this->startsWithService->startsWith(
+                'needle',
+                'needle is longer than haystack',
+            )
+        );
+
         $this->assertFalse(
             $this->startsWithService->startsWith(
                 '',
