@@ -41,8 +41,8 @@ class EscapeTest extends TestCase
             $this->fail();
         } catch (TypeError $typeError) {
             $this->assertSame(
-                'Argument 1 passed to',
-                substr($typeError->getMessage(), 0, 20),
+                'MonthlyBasis\String\Model\Service\Escape::escape(): Argument #1 ($string) must be of type ?string, int given',
+                substr($typeError->getMessage(), 0, 108),
             );
         }
     }
