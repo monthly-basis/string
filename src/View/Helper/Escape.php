@@ -14,7 +14,7 @@ class Escape extends AbstractHelper
         $this->escapeService = $escapeService;
     }
 
-    public function __invoke(string $string = null): string
+    public function __invoke(string|int|null $string): string
     {
         return $this->escapeService->escape($string);
     }

@@ -37,15 +37,10 @@ class EscapeTest extends TestCase
             $this->escapeHelper->__invoke($string)
         );
 
-        try {
-            $this->escapeHelper->__invoke(2020);
-            $this->fail();
-        } catch (TypeError $typeError) {
-            $this->assertSame(
-                'MonthlyBasis\String\View\Helper\Escape::__invoke(): Argument #1 ($string) must be of type ?string, int given',
-                substr($typeError->getMessage(), 0, 108),
-            );
-        }
+        $this->assertSame(
+            $this->escapeHelper->__invoke(2020),
+            '2020',
+        );
 
         $this->assertSame(
             '',
