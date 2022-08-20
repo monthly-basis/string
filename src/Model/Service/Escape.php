@@ -6,14 +6,14 @@ namespace MonthlyBasis\String\Model\Service;
 class Escape
 {
     public function escape(
-        string|null $string
+        string|int|null $string
     ): string {
         if (is_null($string)) {
             return '';
         }
 
         return htmlspecialchars(
-            $string,
+            strval($string),
             ENT_QUOTES | ENT_SUBSTITUTE | ENT_DISALLOWED
         );
     }

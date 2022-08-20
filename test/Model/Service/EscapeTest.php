@@ -36,15 +36,10 @@ class EscapeTest extends TestCase
 
     public function test_escape_int_string()
     {
-        try {
-            $this->escapeService->escape(2020);
-            $this->fail();
-        } catch (TypeError $typeError) {
-            $this->assertSame(
-                'MonthlyBasis\String\Model\Service\Escape::escape(): Argument #1 ($string) must be of type ?string, int given',
-                substr($typeError->getMessage(), 0, 108),
-            );
-        }
+        $this->assertSame(
+            $this->escapeService->escape(2020),
+            '2020',
+        );
     }
 
     public function test_escape_null_string()
