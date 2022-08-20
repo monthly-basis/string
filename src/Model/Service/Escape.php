@@ -6,7 +6,7 @@ namespace MonthlyBasis\String\Model\Service;
 class Escape
 {
     public function escape(
-        string $string = null
+        string|null $string
     ): string {
         if (is_null($string)) {
             return '';
