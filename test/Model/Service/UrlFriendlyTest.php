@@ -1,7 +1,6 @@
 <?php
 namespace MonthlyBasis\StringTest\Model\Service;
 
-use MonthlyBasis\String\Model\Entity as StringEntity;
 use MonthlyBasis\String\Model\Service as StringService;
 use PHPUnit\Framework\TestCase;
 
@@ -9,12 +8,7 @@ class UrlFriendlyTest extends TestCase
 {
     protected function setUp(): void
     {
-        $this->urlFriendlyEntityMock = $this->createMock(
-            StringEntity\Config\UrlFriendly::class
-        );
-        $this->urlFriendlyService = new StringService\UrlFriendly(
-            $this->urlFriendlyEntityMock
-        );
+        $this->urlFriendlyService = new StringService\UrlFriendly();
     }
 
     public function test_getUrlFriendly()
@@ -51,16 +45,6 @@ class UrlFriendlyTest extends TestCase
     {
         $string = 'Capital word and <HTML> tag';
 
-        $this->urlFriendlyEntityMock
-            ->method('getConvertToLowercase')
-            ->will(
-                $this->onConsecutiveCalls(
-                    true,
-                    false
-                )
-            )
-            ;
-
         $this->assertSame(
             'capital-word-and-html-tag',
             $this->urlFriendlyService->getUrlFriendly($string)
@@ -68,7 +52,7 @@ class UrlFriendlyTest extends TestCase
 
         $this->assertSame(
             'Capital-word-and-HTML-tag',
-            $this->urlFriendlyService->getUrlFriendly($string)
+            $this->urlFriendlyService->getUrlFriendly($string, false)
         );
     }
 }

@@ -1,18 +1,12 @@
 <?php
 namespace MonthlyBasis\String\Model\Service;
 
-use MonthlyBasis\String\Model\Entity as StringEntity;
-
 class UrlFriendly
 {
-    public function __construct(
-        StringEntity\Config\UrlFriendly $urlFriendlyEntity
+    public function getUrlFriendly(
+        $string,
+        bool $convertToLowercase = true
     ) {
-        $this->urlFriendlyEntity = $urlFriendlyEntity;
-    }
-
-    public function getUrlFriendly($string)
-    {
         // Remove apostrophes.
         $string = preg_replace('/\'/', '', $string);
         $string = preg_replace('/\’/', '', $string);
@@ -29,8 +23,7 @@ class UrlFriendly
         if (strlen($string) == 0) {
             return '-';
         }
-        if ($this->urlFriendlyEntity->getConvertToLowercase()) {
-            // Convert string to lowercase.
+        if ($convertToLowercase) {
             $string = strtolower($string);
         }
 
