@@ -65,9 +65,6 @@ class Module
     {
         return [
             'factories' => [
-                StringFactory\Config\UrlFriendly::class => function ($sm) {
-                    return new StringFactory\Config\UrlFriendly();
-                },
                 StringService\Contains\CaseInsensitive::class => function ($sm) {
                     return new StringService\Contains\CaseInsensitive();
                 },
