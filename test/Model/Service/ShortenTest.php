@@ -15,6 +15,15 @@ class ShortenTest extends TestCase
     {
         $string = 'hello world';
         $this->assertSame(
+            '',
+            $this->shortenService->shorten(
+                $string,
+                0
+            )
+        );
+
+        $string = 'hello world';
+        $this->assertSame(
             'hello',
             $this->shortenService->shorten(
                 $string,
