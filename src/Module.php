@@ -12,6 +12,7 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
+                    'containsCaseInsensitive'    => StringHelper\Contains\CaseInsensitive::class,
                     'escape'                     => StringHelper\Escape::class,
                     'getFirstSentence'           => StringHelper\Sentences\First::class,
                     'getUrlFriendly'             => StringHelper\UrlFriendly::class,
@@ -21,6 +22,11 @@ class Module
                     'stripTagsAndShorten'        => StringHelper\StripTagsAndShorten::class,
                 ],
                 'factories' => [
+                    StringHelper\Contains\CaseInsensitive::class => function ($sm) {
+                        return new StringHelper\Contains\CaseInsensitive(
+                            $sm->get(StringService\Contains\CaseInsensitive::class)
+                        );
+                    },
                     StringHelper\Escape::class => function ($sm) {
                         return new StringHelper\Escape(
                             $sm->get(StringService\Escape::class)
