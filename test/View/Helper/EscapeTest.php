@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace MonthlyBasis\StringTest\View\Helper;
@@ -10,6 +11,9 @@ use TypeError;
 
 class EscapeTest extends TestCase
 {
+    protected StringHelper\Escape $escapeHelper;
+    protected StringService\Escape $escapeService;
+
     protected function setUp(): void
     {
         $this->escapeService = new StringService\Escape();
