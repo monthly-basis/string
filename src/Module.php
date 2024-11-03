@@ -74,6 +74,9 @@ class Module
                 StringService\Contains\CaseInsensitive::class => function ($sm) {
                     return new StringService\Contains\CaseInsensitive();
                 },
+                StringService\Contains\Latex::class => function ($sm) {
+                    return new StringService\Contains\Latex();
+                },
                 StringService\EndsWith::class => function ($sm) {
                     return new StringService\EndsWith();
                 },
